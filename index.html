@@ -1,0 +1,1624 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>엄마 미화씨의 건강 되찾기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 흰 바탕에 초록 포인트의 깔끔한 노트. 위에 이름·검색·날짜, 큰 탭 다섯 개, 본문은 얇은 선의 카드. */
+:root{
+  --bg:#F6F8F6; --surface:#FFFFFF; --surface2:#EEF3EF; --line:#DCE4DE;
+  --ink:#1F2A25; --muted:#5B6B62;
+  --pink:#DCEEE4; --pink-ink:#276B58; --green2:#4E9B82; --g3:#E8F3E1; --sage:#BFD9CE; --sage-soft:#E3F1EB; --sage-deep:#25715F; --sky:#E5EFF8;
+  --btn-bg:#25715F; --btn-ink:#FFFFFF;
+  --ok:#1E6B35; --ok-bg:#DFF1E3; --warn:#7A5200; --warn-bg:#FFF1C2; --bad:#A3231B; --bad-bg:#FBE0DD; --unk:#4F565C; --unk-bg:#E9ECEE;
+  --focus:#2B6CB0; --shadow:0 1px 3px rgba(20,40,30,.08),0 4px 14px rgba(20,40,30,.05); --overlay:rgba(15,25,20,.5);
+  --font-display:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+  --font-body:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141A17; --surface:#1C2420; --surface2:#242E29; --line:#33403A; --ink:#EAF1ED; --muted:#A5B5AC;
+    --pink:#2A4036; --pink-ink:#9AD6BF; --green2:#8FD0B6; --g3:#2B3A27; --sage:#35574B; --sage-soft:#22352E; --sage-deep:#7CC3AB; --sky:#1F2D3A;
+    --btn-bg:#7CC3AB; --btn-ink:#0F1F19;
+    --ok:#8FD49A; --ok-bg:#1F3A27; --warn:#F2CF63; --warn-bg:#40370F; --bad:#FF9C93; --bad-bg:#4A2320; --unk:#CDD3D0; --unk-bg:#2E3532;
+    --focus:#7FB3F0; --shadow:0 1px 3px rgba(0,0,0,.4); --overlay:rgba(0,0,0,.65); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#141A17; --surface:#1C2420; --surface2:#242E29; --line:#33403A; --ink:#EAF1ED; --muted:#A5B5AC;
+  --pink:#2A4036; --pink-ink:#9AD6BF; --green2:#8FD0B6; --g3:#2B3A27; --sage:#35574B; --sage-soft:#22352E; --sage-deep:#7CC3AB; --sky:#1F2D3A;
+  --btn-bg:#7CC3AB; --btn-ink:#0F1F19;
+  --ok:#8FD49A; --ok-bg:#1F3A27; --warn:#F2CF63; --warn-bg:#40370F; --bad:#FF9C93; --bad-bg:#4A2320; --unk:#CDD3D0; --unk-bg:#2E3532;
+  --focus:#7FB3F0; --shadow:0 1px 3px rgba(0,0,0,.4); --overlay:rgba(0,0,0,.65); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;
+  padding-block:0 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));margin:0}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0;text-wrap:balance}
+h1{font-size:1.7rem} h2{font-size:1.35rem} h3{font-size:1.1rem}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.muted{color:var(--muted)} .small{font-size:.88rem} .tiny{font-size:.8rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row.sp{justify-content:space-between}
+.stack{display:flex;flex-direction:column;gap:14px}
+.grow{flex:1 1 0;min-width:0}
+
+/* 헤더 */
+.top{padding-block:16px 8px}
+.top-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{font-family:var(--font-display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.today{background:var(--pink);color:var(--ink);border-radius:999px;padding:6px 16px;font-size:.95rem}
+.searchbox{position:relative;margin-top:12px}
+.searchbox input[type=search]{width:100%;min-height:56px;border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 20px 10px 52px;font-size:1.05rem}
+.searchbox svg{position:absolute;left:18px;top:16px;width:24px;height:24px;color:var(--muted)}
+.drop{position:absolute;z-index:30;left:0;right:0;top:62px;background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:8px;max-height:60vh;overflow:auto}
+.drop button{display:flex;width:100%;gap:10px;align-items:center;justify-content:space-between;text-align:left;background:none;border:0;border-radius:12px;padding:10px 12px;cursor:pointer;min-height:48px}
+.drop button:hover{background:var(--surface2)}
+.nav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:18px;background:var(--surface);border:2px solid var(--line);text-decoration:none;color:var(--ink);font-size:1rem;min-height:56px;justify-content:center}
+.nav a[aria-current="page"]{background:var(--sage-soft);border-color:var(--sage-deep);color:var(--ink);font-weight:700}
+@media (max-width:520px){.nav a{font-size:.88rem;padding:8px 2px}}
+main{padding-block:18px 10px;display:flex;flex-direction:column;gap:20px}
+
+/* 카드 */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.card.soft{box-shadow:none;background:var(--surface2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.cat{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink);border-radius:20px;padding:22px;min-height:150px;border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;transition:transform .15s}
+.cat:hover{transform:translateY(-3px)}
+.cat svg{width:46px;height:46px}
+.cat h2{font-size:1.45rem}
+.cat.c1{background:var(--sage-soft)} .cat.c2{background:var(--pink)} .cat.c3{background:var(--g3)} .cat.c4{background:var(--surface2)}
+.sum{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:22px;padding:16px 18px;cursor:pointer;box-shadow:var(--shadow);min-height:132px;color:var(--ink)}
+.sum .k{font-size:.92rem;color:var(--muted)}
+.sum .v{font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1.2}
+.sum .v small{font-size:1rem;font-family:var(--font-body)}
+.sum .e{font-size:2.3rem;line-height:1.1}
+
+/* 버튼/입력 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 22px;border-radius:999px;border:2px solid var(--line);background:var(--surface);cursor:pointer;font-size:1.02rem;color:var(--ink)}
+.btn:hover{background:var(--surface2)}
+.btn.primary{background:var(--btn-bg);color:var(--btn-ink);border-color:var(--btn-bg)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.danger{border-color:var(--bad);color:var(--bad)}
+.btn.sm{min-height:44px;padding:6px 16px;font-size:.95rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:6px 16px;border-radius:999px;border:2px solid var(--line);background:var(--surface);cursor:pointer;font-size:.98rem;color:var(--ink)}
+.chip[aria-pressed="true"],.chip.on{background:var(--sage-soft);border-color:var(--sage-deep);font-weight:700}
+.tag{display:inline-block;padding:2px 10px;border-radius:999px;background:var(--surface2);font-size:.8rem;color:var(--muted);border:1px solid var(--line)}
+.tag.ai{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.tag.ok{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.tag.user{background:var(--pink);color:var(--pink-ink);border-color:transparent}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field>label,.lbl{font-size:.95rem;color:var(--muted)}
+input[type=text],input[type=number],input[type=date],input[type=time],input[type=search],select,textarea{width:100%;min-height:52px;border:2px solid var(--line);background:var(--surface);border-radius:16px;padding:10px 14px;font-size:1.02rem}
+textarea{min-height:96px;resize:vertical}
+input[type=checkbox],input[type=radio]{width:24px;height:24px;accent-color:var(--sage-deep)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.check{display:flex;align-items:center;gap:10px;min-height:48px;padding:4px 14px;border:2px solid var(--line);border-radius:16px;background:var(--surface);cursor:pointer}
+.check:has(input:checked){background:var(--sage-soft);border-color:var(--sage-deep)}
+.checks{display:flex;gap:10px;flex-wrap:wrap}
+
+/* 적합도 배지 */
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 12px;font-size:.92rem;font-weight:700;white-space:nowrap}
+.b-g{background:var(--ok-bg);color:var(--ok)} .b-y{background:var(--warn-bg);color:var(--warn)} .b-r{background:var(--bad-bg);color:var(--bad)} .b-u{background:var(--unk-bg);color:var(--unk)}
+.b-n{background:var(--surface2);color:var(--muted)}
+.dot-g,.dot-y,.dot-r,.dot-u{border-left:6px solid}
+.dot-g{border-color:var(--ok)} .dot-y{border-color:var(--warn)} .dot-r{border-color:var(--bad)} .dot-u{border-color:var(--unk)}
+
+/* 목록 카드 */
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.item{display:flex;flex-direction:column;gap:6px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:14px 16px;cursor:pointer;min-height:110px;color:var(--ink)}
+.item:hover{background:var(--surface2)}
+.item .nm{font-family:var(--font-display);font-weight:700;font-size:1.1rem;line-height:1.3}
+.bar{height:12px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--sage-deep);border-radius:99px}
+.note{border-radius:18px;padding:12px 16px;background:var(--warn-bg);color:var(--ink);font-size:.95rem}
+.note.info{background:var(--sage-soft)}
+.note.bad{background:var(--bad-bg)}
+details.card summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:1.05rem;min-height:44px;display:flex;align-items:center}
+
+/* 모달 */
+.modal-bg{position:fixed;inset:0;background:var(--overlay);z-index:100;display:flex;align-items:flex-start;justify-content:center;overflow:auto;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.modal{background:var(--bg);color:var(--ink);border-radius:28px;width:100%;max-width:760px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:16px;margin:auto}
+.modal-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.x{flex:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--line);background:var(--surface);cursor:pointer;font-size:1.3rem;color:var(--ink)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.kv div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 12px}
+.kv b{display:block;font-family:var(--font-display);font-weight:700;font-size:1.2rem}
+.kv span{font-size:.82rem;color:var(--muted)}
+.crow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line)}
+.crow:first-child{border-top:0}
+.crow .t{min-width:0}
+
+/* 레시피 */
+.masonry{column-width:260px;column-gap:14px}
+.masonry>*{break-inside:avoid;margin-bottom:14px;display:block;width:100%}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);text-align:left;padding:0;cursor:pointer;color:var(--ink)}
+.rcard .im{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--pink)}
+.rcard .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px}
+.ph{aspect-ratio:4/3;width:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--pink),var(--sage-soft));color:var(--sage-deep)}
+.ph svg{width:64px;height:64px}
+.rimg{max-width:100%;border-radius:20px;display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.fav{border:0;background:none;cursor:pointer;font-size:1.7rem;line-height:1;min-width:44px;min-height:44px;color:var(--pink-ink)}
+.stepper{display:inline-flex;align-items:center;gap:8px}
+.stepper button{width:52px;height:52px;border-radius:50%;border:2px solid var(--line);background:var(--surface);font-size:1.5rem;cursor:pointer;color:var(--ink)}
+.stepper input{width:84px;text-align:center;font-size:1.3rem}
+.ing{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.ing:first-child{border-top:0}
+.ing b{font-weight:700;white-space:nowrap}
+.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px}
+.irow{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:center}
+@media (max-width:560px){.irow{grid-template-columns:1fr 1fr}.irow .nm{grid-column:1/-1}}
+
+/* 건강: 탭, 폼, 기록 */
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.faces{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.face{position:relative}
+.face input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.face span{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 2px;border:2px solid var(--line);border-radius:18px;background:var(--surface);min-height:84px;justify-content:center;text-align:center;font-size:.82rem}
+.face span b{font-size:1.9rem;font-weight:400;line-height:1.1}
+.face input:checked+span{background:var(--sage-soft);border-color:var(--sage-deep);font-weight:700}
+.face input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.msg{font-family:var(--font-display);font-weight:700;font-size:1.2rem;padding:14px 18px;border-radius:20px;background:var(--pink);color:var(--ink)}
+.msg.good{background:var(--sage-soft)}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal .wd{text-align:center;font-size:.85rem;color:var(--muted);padding:4px 0}
+.day{position:relative;min-height:64px;border:2px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;font-size:.9rem;color:var(--ink)}
+.day .n{font-size:.85rem;line-height:1.3}
+.day .em{font-size:1.45rem;line-height:1.1}
+.day .ic{display:flex;gap:3px;align-items:center;font-size:.7rem;line-height:1;margin-top:2px}
+.day.per{background:var(--pink)}
+.day.sel{border-color:var(--sage-deep);box-shadow:0 0 0 2px var(--sage-deep)}
+.day.td .n{font-weight:700;text-decoration:underline}
+.day.out{visibility:hidden}
+.dm{width:9px;height:9px;border-radius:50%;background:var(--sage-deep);display:inline-block}
+.dr{color:var(--pink-ink);font-size:.8rem}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+svg.chart{width:100%;height:auto;display:block}
+.chart .ax{fill:var(--muted);font-size:12px;font-family:var(--font-body)}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .ref{stroke:var(--muted);stroke-width:1;stroke-dasharray:4 4}
+.chart .ln1{stroke:var(--sage-deep);fill:none;stroke-width:3}
+.chart .ln2{stroke:var(--green2);fill:none;stroke-width:3;stroke-dasharray:7 5}
+.chart .pt1{fill:var(--sage-deep)} .chart .pt2{fill:var(--green2)}
+.chart .lb{fill:var(--ink);font-size:12px;font-family:var(--font-body);font-weight:700}
+.mini{display:flex;gap:4px;align-items:flex-end;height:44px}
+.mini i{display:block;width:16px;background:var(--pink-ink);border-radius:4px 4px 0 0;min-height:2px}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+.photos button{border:0;padding:0;background:none;cursor:pointer;border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative}
+.photos img{width:100%;height:100%;object-fit:cover;display:block}
+.photos .rm{position:absolute;top:4px;right:4px;width:36px;height:36px;border-radius:50%;background:var(--surface);border:2px solid var(--line);color:var(--ink);cursor:pointer}
+.meal{border:1px solid var(--line);border-radius:20px;padding:14px;background:var(--surface);display:flex;flex-direction:column;gap:8px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:200;background:var(--ink);color:var(--bg);border-radius:999px;padding:12px 24px;font-size:1rem;box-shadow:var(--shadow);max-width:90vw;text-align:center}
+.stat{height:8px}
+.ovx{overflow-x:auto}
+.foot{font-size:.85rem;color:var(--muted);text-align:center;padding-top:10px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+</style>
+<div class="wrap">
+  <header class="top" id="top"></header>
+  <main id="main" aria-live="off"></main>
+  <p class="foot" id="foot">기록을 불러오는 중이에요</p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script>
+/* ===== 기본 수록 데이터 =====
+   형식: 이름|영문|분류|별칭;별칭|kcal,탄수,단백질,지방,나트륨mg(100g 기준 대략값)|적합도(당뇨,고혈압,고지혈증,갑상선,갱년기 순서 g/y/r/u)|메모
+   g=적합, y=주의, r=피하기(조건부), u=확인 필요
+   조미료(장류·양념·기름·소스)도 같은 형식으로 이 목록에 적고, 아래에서 자동으로 조미료 메뉴로 나뉘어요.
+   이 값들은 일반적인 영양 상식으로 정리한 대략값이며 공식 DB와 대조하기 전이라 '검토 대기' 상태입니다. */
+const SEED_DATE = '2026-10-30';
+const FOOD_RAW = `
+시금치|Spinach|채소|섬초;포항초|23,3.6,2.9,0.4,79|ggggg|칼륨, 식이섬유, 엽산이 풍부해요. 데쳐서 한 접시(70g 안팎)가 알맞아요. 신장 질환으로 칼륨 제한이 있으면 의료진과 상의하세요.
+브로콜리|Broccoli|채소||34,6.6,2.8,0.4,33|gggyg|식이섬유가 많아요. 십자화과 채소는 익혀 먹으면 갑상선에 부담이 적어요. 생으로 매일 아주 많이 먹는 습관만 피하세요.
+양배추|Cabbage|채소||25,5.8,1.3,0.1,18|gggyg|데치거나 익혀서 드세요. 생즙으로 많은 양을 꾸준히 먹는 것은 갑상선 때문에 주의가 필요해요.
+배추|Napa cabbage|채소|알배추|16,3.2,1.2,0.2,8|ggggg|국, 나물, 겉절이에 좋아요. 김치로 먹을 때는 나트륨을 따로 확인하세요.
+케일|Kale|채소||35,4.4,2.9,1.5,53|gggyg|녹즙으로 매일 많이 마시는 것은 갑상선과 와파린(항응고제) 복용 때문에 주의가 필요해요. 샐러드나 찜으로 적당량은 괜찮아요.
+콜리플라워|Cauliflower|채소|꽃양배추|25,5,1.9,0.3,30|gggyg|익혀서 적당량 드세요. 생으로 아주 많이 먹는 것만 주의해요.
+당근|Carrot|채소||41,9.6,0.9,0.2,69|ggggg|기름에 살짝 볶으면 카로틴 흡수가 좋아요. 주스로 많이 마시면 당이 늘어요.
+오이|Cucumber|채소||15,3.6,0.7,0.1,2|ggggg|수분이 많고 열량이 낮아요.
+토마토|Tomato|채소|방울토마토|18,3.9,0.9,0.2,5|ggggg|익히면 라이코펜 흡수가 좋아져요.
+양파|Onion|채소||40,9.3,1.1,0.1,4|ggggg|볶음, 국, 샐러드에 두루 좋아요.
+대파|Green onion|채소|파|32,7.3,1.8,0.2,16|ggggg|소금 대신 향을 내는 양념 채소로 좋아요.
+마늘|Garlic|채소||149,33,6.4,0.5,17|ggggg|요리에 쓰는 양은 문제가 적어요. 생마늘을 많이 먹거나 마늘 보충제를 드실 때는 항응고제 복용 여부를 확인하세요.
+고추|Chili pepper|채소|풋고추;청양고추|40,8.8,1.9,0.4,9|ggggy|매운맛이 안면홍조를 심하게 하는 사람이 있어요. 홍조가 심한 날에는 양을 줄여 보세요.
+파프리카|Bell pepper|채소|피망|31,6,1,0.3,4|ggggg|비타민 C가 풍부하고 열량이 낮아요.
+애호박|Zucchini|채소|호박|17,3.1,1.2,0.3,8|ggggg|볶음, 전, 국에 두루 좋아요. 기름에 부치면 열량이 늘어요.
+가지|Eggplant|채소||25,5.9,1,0.2,2|ggggg|찜이나 구이가 좋아요. 기름에 튀기면 열량이 크게 늘어요.
+콩나물|Soybean sprouts|채소||47,4.6,5.6,1.4,6|ggggg|국, 나물, 비빔밥에 좋아요.
+숙주나물|Mung bean sprouts|채소|녹두나물|30,5.9,3,0.2,6|ggggg|살짝 데쳐서 드세요.
+무|Korean radish|채소||18,4.1,0.6,0.1,21|ggggg|국, 조림, 생채에 좋아요.
+상추|Lettuce|채소||15,2.9,1.4,0.2,28|ggggg|쌈 채소로 식이섬유를 더하기 좋아요. 쌈장은 나트륨이 많으니 양을 줄이세요.
+깻잎|Perilla leaf|채소||37,6,3.5,0.5,5|ggggg|쌈이나 무침으로 드세요.
+부추|Chives|채소|정구지|30,4,3,0.5,5|ggggg|무침, 전, 국에 좋아요.
+셀러리|Celery|채소|샐러리|14,3,0.7,0.2,80|ggggg|수프나 샐러드에 좋아요.
+미나리|Water dropwort|채소||20,3.5,2,0.2,30|ggggg|데쳐서 무침으로 드세요.
+우엉|Burdock root|채소||72,17.3,1.5,0.1,5|ygggg|식이섬유가 많지만 탄수화물도 비교적 많아요. 당뇨가 있으면 조림 양념의 당을 줄이고 양을 조절하세요.
+연근|Lotus root|채소||74,17,2.6,0.1,40|ygggg|탄수화물이 많은 편이에요. 조림에 설탕을 많이 쓰면 혈당 부담이 커져요.
+감자|Potato|채소||77,17.5,2,0.1,6|ygggg|혈당을 비교적 빨리 올릴 수 있어요. 한 번에 중간 크기 1개 안쪽으로, 단백질·채소와 함께 드세요.
+고구마|Sweet potato|채소||86,20,1.6,0.1,55|ygggg|식이섬유가 있지만 탄수화물이 많아요. 한 번에 중간 크기 반 개에서 1개 정도로 양을 정하고 식사를 대신하세요.
+단호박|Kabocha|채소|밤호박|45,10,1.5,0.2,1|ygggg|탄수화물이 채소 중 많은 편이에요. 밥 양을 줄이고 함께 드세요.
+배추김치|Kimchi|가공식품|김치|15,2.4,1.1,0.5,600|grggg|발효 식품이지만 나트륨이 많아요. 한 번에 3~4쪽 안쪽으로 드세요.
+사과|Apple|과일||52,13.8,0.3,0.2,1|ggggg|껍질째 하루 1/2~1개가 알맞아요. 주스보다 통과일이 좋아요.
+배|Pear|과일|나주배|42,10.5,0.4,0.1,0|ggggg|한 번에 1/4~1/2개 정도로 드세요.
+딸기|Strawberry|과일||32,7.7,0.7,0.3,1|ggggg|한 줌(6~8알) 정도가 알맞아요.
+블루베리|Blueberry|과일||57,14.5,0.7,0.3,1|ggggg|한 줌 정도가 알맞아요. 냉동도 괜찮아요.
+귤|Mandarin|과일|밀감;감귤|53,13.3,0.8,0.3,2|ggggg|하루 1~2개 정도가 알맞아요.
+오렌지|Orange|과일||47,11.8,0.9,0.1,0|ggggg|주스로 마시기보다 통째로 드세요.
+키위|Kiwi|과일|참다래|61,14.7,1.1,0.5,3|ggggg|하루 1개 정도가 알맞아요.
+복숭아|Peach|과일||39,9.5,0.9,0.3,0|ggggg|껍질째 1/2~1개 드세요.
+레몬|Lemon|과일||29,9.3,1.1,0.3,2|ggggg|소금 대신 상큼한 맛을 더하기 좋아요.
+아보카도|Avocado|과일||160,8.5,2,14.7,7|ggggg|불포화지방이 많지만 열량이 높아요. 한 번에 1/4~1/2개가 알맞아요.
+바나나|Banana|과일||89,22.8,1.1,0.3,1|ygggg|당이 비교적 많아요. 당뇨가 있으면 작은 것 반 개에서 1개를 간식으로 하고, 단백질과 함께 드세요.
+포도|Grapes|과일||69,18,0.7,0.2,2|ygggg|당이 많아서 먹기 쉬워요. 한 번에 10알 안쪽으로 정해 두세요.
+수박|Watermelon|과일||30,7.6,0.6,0.2,1|ygggg|수분이 많지만 한 번에 많이 먹기 쉬워요. 한두 조각으로 정하세요.
+감|Persimmon|과일|홍시;단감|70,18,0.6,0.2,1|ygggg|당이 많은 편이에요. 하루 반 개에서 1개로 조절하세요.
+참외|Korean melon|과일||33,8,0.8,0.1,10|ygggg|당이 있어 양 조절이 필요해요. 반 개 안쪽으로 드세요.
+파인애플|Pineapple|과일||50,13,0.5,0.1,1|ygggg|당이 많은 편이에요. 통조림은 시럽을 빼고 드세요.
+망고|Mango|과일||60,15,0.8,0.4,1|ygggg|당이 많아서 한두 조각이 알맞아요.
+건포도|Raisins|과일|말린포도|299,79,3,0.5,11|rgggg|말린 과일은 당이 농축돼 있어 한 번에 한 줌 안쪽(약 15g)으로 드세요.
+자몽|Grapefruit|과일|그레이프프루트|42,10.7,0.8,0.1,0|grrgg|일부 스타틴(고지혈증약)과 일부 혈압약(칼슘채널차단제)의 혈중 농도를 높일 수 있어요. 해당 약을 드시는 동안은 피하고, 복용 약이 있으면 약사에게 확인하세요. 약을 먹지 않는다면 적당량은 괜찮아요.
+현미밥|Brown rice (cooked)|곡류|현미|111,23,2.6,0.9,5|ggggg|흰쌀보다 식이섬유가 많아요. 한 공기(약 210g)를 기준으로 하세요.
+백미밥|White rice (cooked)|곡류|흰쌀밥;쌀밥|130,28,2.7,0.3,1|rgggg|혈당을 빨리 올릴 수 있어요. 잡곡을 섞고 한 공기(약 210g) 안쪽으로, 채소와 단백질 반찬과 함께 드세요.
+잡곡밥|Mixed-grain rice (cooked)|곡류|오곡밥|125,26,3,0.8,3|ggggg|콩, 보리, 귀리를 섞으면 식이섬유가 늘어요.
+귀리|Oats|곡류|오트밀;오트|389,66,17,6.9,2|ggggg|건조 상태 기준 수치예요. 베타글루칸이 콜레스테롤 관리 식습관에 도움이 될 수 있어요. 시판 맛 첨가 제품은 당을 확인하세요.
+보리|Barley|곡류||354,73,12.5,2.3,12|ggggg|건조 상태 기준 수치예요. 밥에 섞으면 식이섬유가 늘어요.
+퀴노아|Quinoa|곡류||368,64,14,6,5|ggggg|건조 상태 기준 수치예요. 밥 대신 샐러드나 수프에 넣을 수 있어요.
+통밀빵|Whole wheat bread|곡류|통밀식빵|247,41,13,3.4,450|ggggg|제품마다 나트륨과 첨가당이 달라요. 영양 성분표를 확인하고 통밀 함량이 높은 것을 고르세요.
+식빵|White bread|곡류|흰빵|265,49,9,3.2,491|rrggg|정제 곡물이라 혈당이 빨리 오르고 나트륨도 있어요. 통밀빵으로 바꾸거나 양을 줄이세요.
+국수|Wheat noodles (cooked)|곡류|소면;삶은국수|138,25,4.5,0.6,5|ygggg|삶은 상태 기준이에요. 한 번에 먹는 양이 많아지기 쉬워요. 채소와 단백질을 함께 드세요.
+떡|Rice cake|곡류|가래떡;흰떡|230,50,4,0.5,2|rgggg|혈당을 빨리 올려요. 소량만 단백질, 채소와 함께 드세요.
+라면|Instant noodles|가공식품|인스턴트라면|440,63,9,17,1500|rrrgg|나트륨과 포화지방이 많아요. 한 봉지에 하루 나트륨 권장량(2,000mg 이하)에 가까운 양이 들어 있어요. 국물을 남기고 자주 먹지 마세요.
+옥수수|Corn|곡류|찰옥수수|87,19,3.3,1.4,15|ygggg|탄수화물이 많은 편이에요. 간식으로 반 개 정도가 알맞아요.
+두부|Tofu|콩류|순두부|76,1.9,8,4.8,7|gggyg|식물성 단백질이에요. 대두 제품은 갑상선호르몬제 흡수에 영향을 줄 수 있어요. 갑상선약을 드신 뒤 몇 시간 간격을 두고 드세요. 정확한 간격은 의료진에게 확인하세요.
+대두|Soybean|콩류|메주콩;노란콩|446,30,36,20,2|gggyg|이소플라본이 있어 갱년기 식단에 많이 쓰여요. 갑상선약과 시간 간격을 두세요.
+검은콩|Black soybean|콩류|서리태;검정콩|416,34,36,16,3|gggyg|대두와 같은 주의가 필요해요. 갑상선약과 시간 간격을 두세요.
+무가당 두유|Unsweetened soy milk|음료|두유|33,1.6,2.9,1.8,40|gggyg|가당 제품은 당을 확인하세요. 갑상선약과 시간 간격을 두세요.
+렌틸콩|Lentils|콩류|렌틸|116,20,9,0.4,2|ggggg|삶은 상태 기준이에요. 식이섬유와 단백질이 많아요.
+병아리콩|Chickpeas|콩류|칙피|164,27,8.9,2.6,7|ggggg|삶은 상태 기준이에요. 샐러드나 수프에 넣어 드세요.
+강낭콩|Kidney beans|콩류||127,22.8,8.7,0.5,2|ggggg|반드시 푹 익혀서 드세요. 덜 익으면 속이 불편할 수 있어요.
+팥|Adzuki bean|콩류|붉은팥|128,25,7.5,0.1,8|ggggg|삶은 상태 기준이에요. 팥죽·빙수는 설탕 때문에 당이 늘어요.
+녹두|Mung bean|콩류||105,19,7,0.4,2|ggggg|삶은 상태 기준이에요.
+완두콩|Green peas|콩류|청완두|81,14,5.4,0.4,5|ggggg|밥이나 볶음에 넣어 드세요.
+닭가슴살|Chicken breast|육류|닭안심|165,0,31,3.6,74|ggggg|지방이 적은 단백질이에요. 튀기거나 소금을 많이 치지 않고 삶거나 구우세요.
+닭다리살|Chicken thigh|육류|닭다리|209,0,26,11,95|ggggg|껍질을 벗기면 포화지방이 줄어요.
+소고기 살코기|Lean beef|육류|우둔;홍두깨;안심|150,0,22,6,60|ggggg|지방이 적은 부위를 적당량 드세요.
+소고기 차돌박이|Beef brisket (fatty)|육류|차돌;갈비|350,0,17,31,60|ggrgg|포화지방이 많아요. 고지혈증이 있으면 자주 드시지 않는 것이 좋아요.
+돼지고기 안심|Pork tenderloin|육류|돼지안심|120,0,21,3.5,55|ggggg|지방이 적은 부위예요.
+삼겹살|Pork belly|육류||518,0,9,53,32|ggrgg|포화지방이 많고 열량이 높아요. 구워 먹을 때 쌈장과 소금으로 나트륨이 늘어요. 자주 먹지 마세요.
+소시지|Sausage|가공식품|비엔나|301,2,12,27,1000|rrrgg|나트륨과 포화지방이 많은 가공육이에요.
+햄|Ham|가공식품|스팸;런천미트|250,2,16,20,1200|rrrgg|나트륨과 포화지방이 많은 가공육이에요.
+베이컨|Bacon|가공식품||541,1.4,37,42,1717|rrrgg|나트륨과 포화지방이 많아요.
+계란|Egg|달걀|달걀|143,0.7,12.6,9.5,142|ggggg|하루 1개 안팎이 흔한 기준이에요. 콜레스테롤 수치와 의료진 지침에 따라 조절하세요.
+고등어|Mackerel|생선||205,0,18.6,13.9,90|ggggg|오메가-3가 풍부해요. 구이나 조림 양념의 나트륨을 줄이세요.
+연어|Salmon|생선||208,0,20,13,59|ggggg|오메가-3가 풍부해요. 훈제 연어는 나트륨이 많아요.
+삼치|Spanish mackerel|생선||160,0,20,8,60|ggggg|구이나 조림으로 드세요.
+꽁치|Pacific saury|생선||230,0,18,17,70|ggggg|통조림은 나트륨을 확인하세요.
+갈치|Hairtail|생선||140,0,18,7,90|ggggg|구이나 조림으로 드세요.
+명태|Pollock|생선|동태;북어;코다리|80,0,17,0.8,70|ggggg|지방이 적은 흰살 생선이에요. 북어국은 소금 간을 줄이세요.
+참치캔|Canned tuna|가공식품|참치통조림|130,0,26,3,350|gyggg|기름과 소금물을 빼고 드세요. 나트륨 확인이 필요해요.
+멸치|Dried anchovy|생선|잔멸치|290,0,50,10,2000|grggg|칼슘이 많지만 나트륨도 많아요. 끓는 물에 데쳐 짠맛을 줄이면 좋아요.
+굴비|Salted yellow croaker|생선|자반고등어;간고등어|200,0,20,13,1500|grggg|소금에 절인 생선이라 나트륨이 많아요. 물에 담그거나 양을 줄이세요.
+새우|Shrimp|해산물|대하|99,0.2,24,0.3,111|ggggg|단백질이 풍부해요. 소금물에 찌거나 삶아 드세요.
+오징어|Squid|해산물||92,3,16,1.4,44|ggggg|데치거나 구워 드세요. 튀김은 열량이 늘어요.
+조개|Clams|해산물|바지락;모시조개|74,2.6,13,1,56|ggggg|국물은 나트륨이 늘 수 있어요.
+굴|Oyster|해산물||68,4,7,2.5,106|ggggg|생굴은 위생에 주의하세요.
+김|Laver|해조류|구운김;조미김|188,41,40,2,1000|gggyg|요오드가 있어요. 갑상선 때문에 많은 양을 매일 드시는 것은 피하세요. 조미김은 소금이 있어요. 하루 몇 장 정도가 알맞아요.
+미역|Wakame|해조류|건미역|45,9,3,0.6,870|gggyg|불린 상태와 건조 상태의 수치 차이가 커요. 요오드가 많아 갑상선 때문에 양을 정해 두세요.
+다시마|Kelp|해조류|곤포|43,10,1.7,0.6,230|gggrg|요오드가 아주 많아서 갑상선 기능에 영향을 줄 수 있어요. 많은 양을 자주 드시는 것은 피하고, 육수용으로 쓸 때도 의료진과 상의하세요.
+톳|Hijiki|해조류||45,10,1,0.1,200|gggyg|요오드가 있어요. 양을 조절하세요.
+우유|Milk|유제품||61,4.8,3.2,3.3,43|gggyg|칼슘이 많아 갑상선호르몬제 흡수를 방해할 수 있어요. 갑상선약을 먹고 4시간 정도 간격을 두는 것이 일반적인 안내예요. 정확한 간격은 약 설명서나 의료진에게 확인하세요.
+저지방 우유|Low-fat milk|유제품||42,5,3.4,1,44|gggyg|갑상선약과 4시간 정도 간격을 두는 것이 일반적인 안내예요.
+플레인 요거트|Plain yogurt|유제품|무가당요거트|61,4.7,3.5,3.3,46|gggyg|무가당 제품을 고르세요. 갑상선약과 간격을 두세요.
+가당 요거트|Sweetened yogurt|유제품|딸기요거트|90,15,3,2,50|rggrg|첨가당이 많아요. 무가당 요거트에 과일을 더하는 것이 좋아요.
+치즈|Cheese|유제품|슬라이스치즈;체다|350,2,22,28,700|grrrg|나트륨과 포화지방이 많아요. 칼슘 때문에 갑상선약과 간격이 필요해요.
+버터|Butter|유제품||717,0.1,0.9,81,11|ggrgg|포화지방이 많아요. 소량만 쓰세요.
+아몬드|Almond|견과·씨앗||579,21.6,21,49.9,1|ggggg|한 줌(20~25g)이 알맞아요. 열량이 높아요. 무염 제품을 고르세요.
+호두|Walnut|견과·씨앗||654,13.7,15,65,2|ggggg|한 줌(20~25g) 정도로 드세요.
+땅콩|Peanut|견과·씨앗||567,16,26,49,18|ggggg|알레르기가 있다면 피하세요. 소금 땅콩은 나트륨이 늘어요.
+해바라기씨|Sunflower seeds|견과·씨앗||584,20,21,51,9|ggggg|한 줌 이내로 드세요.
+참깨|Sesame|견과·씨앗|통깨;깨|573,23,18,50,11|ggggg|칼슘이 있지만 양이 적어요. 요리에 뿌려 쓰세요.
+아마씨|Flaxseed|견과·씨앗|플랙스씨드|534,29,18,42,30|ggggg|갈아서 1~2큰술 정도가 알맞아요.
+잣|Pine nut|견과·씨앗||673,13,14,68,2|ggggg|열량이 높아 소량만 드세요.
+표고버섯|Shiitake|버섯||34,6.8,2.2,0.5,9|ggggg|말린 표고는 불려서 쓰세요.
+느타리버섯|Oyster mushroom|버섯||33,6,3.3,0.4,18|ggggg|볶음, 국, 전골에 좋아요.
+양송이버섯|Button mushroom|버섯||22,3.3,3.1,0.3,5|ggggg|수프나 볶음에 좋아요.
+팽이버섯|Enoki|버섯||37,7.8,2.7,0.3,3|ggggg|가볍게 익혀 드세요.
+새송이버섯|King oyster mushroom|버섯|큰느타리|35,6.8,2.5,0.2,10|ggggg|구이나 볶음에 좋아요.
+설탕|Sugar|양념|백설탕|387,100,0,0,1|rgggg|혈당을 빠르게 올려요. 양념과 음료의 설탕을 줄이세요.
+꿀|Honey|양념||304,82,0.3,0,4|rgggg|천연이지만 당이 많아요. 설탕처럼 양을 줄여 쓰세요.
+소금|Salt|양념|천일염;꽃소금|0,0,0,0,38758|grggg|나트륨이 많아요. 하루 소금 5g 안쪽이 일반적인 권고예요.
+간장|Soy sauce|장류|진간장;양조간장|60,6,6,0,5500|grggg|나트륨이 많아요. 양을 줄이고 식초·레몬즙·후추로 맛을 더하세요.
+된장|Soybean paste|장류|된장찌개|199,20,12,6,4000|grgrg|발효 식품이지만 나트륨이 많아요. 국물 양을 줄이세요. 대두 제품이라 갑상선약 간격이 필요할 수 있어요.
+고추장|Gochujang|장류||200,40,5,2,3000|rrggg|당과 나트륨이 많아요. 양을 줄이세요.
+쌈장|Ssamjang|장류|쌈된장|170,25,6,4,3000|rrggg|된장과 고추장을 섞어 만든 양념이라 나트륨과 당이 모두 있어요. 쌈 채소에 찍을 때는 한 숟가락 이내로 소량만 쓰세요.
+청국장|Cheonggukjang|장류|청국장찌개|160,10,15,7,1400|grgrg|발효 대두 식품이에요. 나트륨이 있으니 찌개 국물은 남기세요. 비타민 K가 많아 와파린을 드시면 의료진과 상의하세요. 대두 제품이라 갑상선약과 시간 간격을 두세요.
+막장|Makjang|장류||200,30,10,3,3500|grgrg|된장 계열 장이라 나트륨이 많아요. 양을 줄여 쓰세요. 대두 제품이라 갑상선약과 시간 간격을 두세요.
+춘장|Chunjang|장류|짜장소스|190,25,6,5,3500|rrggg|짜장 소스의 재료로 당과 나트륨이 모두 많아요. 자주 먹지 않는 것이 좋아요.
+국간장|Korean soup soy sauce|장류|조선간장;집간장|45,6,5,0,7000|grggg|염도가 매우 높아요. 국이나 나물에 한두 방울씩 간을 맞추는 정도로 쓰세요.
+저염 간장|Low-sodium soy sauce|장류|저염간장|50,6,5,0,3300|gyggg|일반 간장보다 나트륨이 적지만 칼륨이 늘어 있을 수 있어요. 신장 질환이 있으면 의료진에게 확인하세요. 많이 넣으면 줄인 효과가 없어요.
+일본식 미소|Miso|장류|미소;일본된장;미소된장|199,26,12,6,3700|grgrg|발효 대두 식품이지만 나트륨이 많아요. 국 한 그릇에 한 큰술 이내로 쓰고, 갑상선약과 시간 간격을 두세요.
+굴소스|Oyster sauce|소스|오이스터소스|90,20,2,0,3000|rrggg|당과 나트륨이 많아요. 볶음에 한 스푼 이내로 쓰고 다른 간은 줄이세요.
+두반장|Doubanjiang|소스||60,8,3,2,4500|grggy|매운 발효 장이라 나트륨이 많고 매운맛이 홍조를 심하게 할 수 있어요.
+멸치액젓|Anchovy fish sauce|장류|액젓|50,3,8,0,6500|grggg|나트륨이 매우 높아요. 김치나 나물에 소량만 쓰세요.
+까나리액젓|Sand lance fish sauce|장류||50,3,8,0,6500|grggg|나트륨이 매우 높아요. 김치나 나물에 소량만 쓰세요.
+새우젓|Salted shrimp|장류|젓갈|40,1,8,1,7000|grggg|나트륨이 매우 높아요. 국이나 찜에 몇 알 넣는 정도로만 쓰세요.
+참기름|Sesame oil|기름||884,0,0,100,0|ggggg|열량이 높아 마무리에 몇 방울만 쓰세요.
+올리브오일|Olive oil|기름|올리브유|884,0,0,100,2|ggggg|불포화지방이 많아요. 하루 1~2큰술 정도로 정해 두세요.
+들기름|Perilla oil|기름||884,0,0,100,0|ggggg|열에 약해 가열하지 않고 쓰는 것이 좋아요.
+식초|Vinegar|양념|사과식초|18,0.9,0,0,5|ggggg|염분을 줄이고 맛을 더할 때 좋아요. 원액은 희석해서 쓰세요.
+마요네즈|Mayonnaise|소스||680,0.6,1,75,600|ggrgg|지방이 많고 나트륨이 있어요. 소량만 쓰세요.
+카레 루|Curry roux block|소스|고형카레|500,40,6,35,3500|rrrgg|나트륨과 포화지방이 많아요. 카레가루와 다르니 구분하세요.
+감자튀김|French fries|가공식품|프렌치프라이|312,41,3.4,15,210|rrrgg|튀긴 음식은 열량과 지방이 많아요.
+과자|Snack chips|가공식품|감자칩;스낵|536,53,7,34,500|rrrgg|열량, 지방, 나트륨이 많아요. 간식은 견과류와 과일로 바꾸세요.
+케이크|Cake|가공식품|생크림케이크|350,50,4,15,300|rrrgg|당과 포화지방이 많아요. 특별한 날에 작은 조각으로 드세요.
+아이스크림|Ice cream|가공식품||207,24,3.5,11,80|rrrgg|당과 포화지방이 많아요.
+다크 초콜릿|Dark chocolate|가공식품|다크초콜릿|546,46,5,31,20|ygggg|카카오 70% 이상으로 한두 조각만 드세요. 당과 열량이 높아요.
+프라이드 치킨|Fried chicken|가공식품|치킨|260,10,22,15,500|rrrgg|튀김옷의 기름과 나트륨이 많아요.
+탄산음료|Soda|음료|콜라;사이다|42,10.6,0,0,10|ryggg|설탕이 많아 혈당을 빠르게 올려요. 당뇨가 있으면 피하세요. 무가당 탄산수로 바꾸는 것을 권해요.
+시판 과일주스|Fruit juice|음료|오렌지주스;주스|45,10.4,0.7,0.2,2|rgggg|통과일보다 당이 빨리 흡수돼요. 작은 컵 하나 정도로 정하세요.
+커피|Coffee|음료|블랙커피;아메리카노|2,0,0.3,0,5|gggyy|카페인이 있어요. 갑상선약은 커피와 30~60분 이상 간격을 두는 것이 일반적인 안내예요. 홍조가 심한 날에는 양을 줄여 보세요.
+믹스커피|Instant coffee mix|음료|커피믹스|450,70,5,15,100|rggry|설탕과 프림이 들어 있어요. 하루 마시는 양을 줄이세요. 갑상선약과 간격을 두세요.
+녹차|Green tea|음료|녹차잎|1,0,0.2,0,1|ggggg|카페인이 있어요. 늦은 시간에는 피하면 좋아요.
+보리차|Barley tea|음료||1,0.2,0,0,1|ggggg|카페인이 없어요.
+소주|Soju|음료|술;맥주;와인|140,0,0,0,0|rrrgy|술은 혈당약 복용 중 저혈당 위험이 있고 혈압, 중성지방, 홍조에 영향을 줄 수 있어요. 마시지 않는 것이 좋고, 마신다면 의료진 지침을 따르세요.
+`;
+
+const SEED_RECIPES = [
+ {id:'r-s1',name:'닭가슴살 브로콜리 볶음',servings:2,minutes:20,level:'쉬움',tags:['당뇨식','저염식','단백질 식단'],
+  ing:[{n:'닭가슴살',a:200,u:'g'},{n:'브로콜리',a:200,u:'g'},{n:'양파',a:1,u:'개'},{n:'마늘',a:3,u:'쪽'},{n:'올리브오일',a:1,u:'큰술'},{n:'간장',a:1,u:'작은술'},{n:'후추',a:0.5,u:'작은술'}],
+  steps:['닭가슴살은 한 입 크기로 썰어 후추를 뿌려 둡니다.','브로콜리는 작게 잘라 끓는 물에 1분 데칩니다.','팬에 올리브오일을 두르고 다진 마늘과 양파를 볶습니다.','닭가슴살을 넣어 속까지 익힌 뒤 브로콜리와 간장을 넣고 1분 더 볶습니다.'],
+  nut:{kcal:260,carb:14,protein:33,fat:8,na:380},adjust:'간장은 처음에 절반만 넣고 맛을 보며 더하세요. 인분이 크게 늘면 볶는 시간이 길어지니 팬을 나누어 볶으세요.',origin:'sample'},
+ {id:'r-s2',name:'귀리 블루베리 오트밀',servings:1,minutes:10,level:'쉬움',tags:['당뇨식','콜레스테롤 관리식','갱년기 건강 식단'],
+  ing:[{n:'귀리',a:40,u:'g'},{n:'무가당 두유',a:200,u:'ml'},{n:'블루베리',a:50,u:'g'},{n:'아몬드',a:10,u:'g'},{n:'계피',a:0.5,u:'작은술'}],
+  steps:['귀리와 두유를 냄비에 넣고 약불에서 3~5분 저어 가며 끓입니다.','그릇에 담고 블루베리와 잘게 썬 아몬드를 올립니다.','계핏가루를 소량 뿌립니다.'],
+  nut:{kcal:300,carb:38,protein:12,fat:11,na:70},adjust:'두유는 갑상선호르몬제를 드시는 경우 복용 시간과 간격을 두세요.',origin:'sample'},
+ {id:'r-s3',name:'고등어 무조림',servings:2,minutes:35,level:'보통',tags:['단백질 식단','콜레스테롤 관리식'],
+  ing:[{n:'고등어',a:300,u:'g'},{n:'무',a:200,u:'g'},{n:'대파',a:1,u:'개'},{n:'마늘',a:2,u:'쪽'},{n:'생강',a:1,u:'작은술'},{n:'고춧가루',a:1,u:'작은술'},{n:'간장',a:1,u:'큰술'}],
+  steps:['무는 도톰하게 썰어 냄비 바닥에 깔고 물을 자작하게 붓습니다.','간장, 고춧가루, 다진 마늘, 생강을 섞어 양념을 만듭니다.','무 위에 고등어를 올리고 양념을 끼얹어 중불에서 15분 졸입니다.','대파를 올리고 5분 더 졸입니다.'],
+  nut:{kcal:340,carb:8,protein:28,fat:21,na:650},adjust:'나트륨이 높은 편이에요. 간장을 2/3로 줄이고 무를 더 넣으면 짠맛이 줄어요. 양이 늘면 졸이는 시간이 길어져요.',origin:'sample'},
+ {id:'r-s4',name:'두부 계란 스크램블',servings:2,minutes:15,level:'쉬움',tags:['저염식','단백질 식단','갱년기 건강 식단'],
+  ing:[{n:'두부',a:200,u:'g'},{n:'계란',a:2,u:'개'},{n:'대파',a:1,u:'개'},{n:'올리브오일',a:1,u:'큰술'},{n:'후추',a:1,u:'꼬집'}],
+  steps:['두부는 물기를 빼고 으깹니다.','팬에 올리브오일을 두르고 송송 썬 대파를 볶습니다.','두부를 넣어 2분 볶은 뒤 풀어 둔 계란을 부어 저어 가며 익힙니다.','후추를 뿌립니다.'],
+  nut:{kcal:210,carb:4,protein:17,fat:14,na:150},adjust:'소금을 따로 넣지 않아도 되지만, 필요하면 한 꼬집부터 시작하세요.',origin:'sample'},
+ {id:'r-s5',name:'시금치 두부 된장국',servings:2,minutes:20,level:'쉬움',tags:['갱년기 건강 식단','단백질 식단'],
+  ing:[{n:'시금치',a:100,u:'g'},{n:'두부',a:150,u:'g'},{n:'된장',a:1,u:'큰술'},{n:'대파',a:0.5,u:'개'},{n:'마늘',a:1,u:'쪽'}],
+  steps:['냄비에 물 600ml를 끓이고 된장을 풀어 줍니다.','두부와 다진 마늘을 넣고 5분 끓입니다.','시금치를 넣고 1~2분 더 끓입니다.','대파를 넣고 불을 끕니다.'],
+  nut:{kcal:120,carb:6,protein:11,fat:6,na:480},adjust:'국물을 남기면 나트륨 섭취가 줄어요. 된장은 처음에 2/3만 풀고 간을 보세요. 인분이 늘면 된장은 비례보다 조금 적게 시작하세요.',origin:'sample'},
+ {id:'r-s6',name:'연어 아보카도 샐러드',servings:2,minutes:15,level:'쉬움',tags:['콜레스테롤 관리식','저염식','갱년기 건강 식단'],
+  ing:[{n:'연어',a:200,u:'g'},{n:'아보카도',a:1,u:'개'},{n:'상추',a:100,u:'g'},{n:'토마토',a:100,u:'g'},{n:'올리브오일',a:1,u:'큰술'},{n:'레몬',a:0.5,u:'개'},{n:'후추',a:0.5,u:'작은술'}],
+  steps:['연어는 팬에 굽거나 에어프라이어로 익혀 한 입 크기로 뜯습니다.','상추, 토마토, 아보카도를 먹기 좋게 썰어 그릇에 담습니다.','연어를 올리고 올리브오일, 레몬즙, 후추를 뿌립니다.'],
+  nut:{kcal:420,carb:9,protein:23,fat:33,na:70},adjust:'열량이 높은 편이에요. 아보카도를 반 개로 줄이면 열량이 줄어요.',origin:'sample'},
+ {id:'r-s7',name:'렌틸콩 채소 수프',servings:4,minutes:40,level:'보통',tags:['당뇨식','콜레스테롤 관리식','저염식'],
+  ing:[{n:'렌틸콩',a:150,u:'g'},{n:'양파',a:1,u:'개'},{n:'당근',a:1,u:'개'},{n:'셀러리',a:80,u:'g'},{n:'토마토',a:200,u:'g'},{n:'마늘',a:3,u:'쪽'},{n:'올리브오일',a:1,u:'큰술'},{n:'물',a:1.2,u:'L'},{n:'커민',a:1,u:'작은술'},{n:'소금',a:0.5,u:'작은술'}],
+  steps:['렌틸콩은 씻어 물에 담가 둡니다.','냄비에 올리브오일을 두르고 다진 양파, 마늘, 당근, 셀러리를 볶습니다.','토마토, 렌틸콩, 커민, 물을 넣고 25분 끓입니다.','소금으로 간하고 한 번 더 끓입니다.'],
+  nut:{kcal:230,carb:36,protein:13,fat:4,na:260},adjust:'소금은 인분이 늘어도 처음에는 1/2만 넣고 맛을 보세요. 양이 많으면 끓이는 시간이 10분 정도 늘 수 있어요.',origin:'sample'},
+ {id:'r-s8',name:'잡곡 채소 비빔밥',servings:1,minutes:25,level:'보통',tags:['갱년기 건강 식단'],
+  ing:[{n:'잡곡밥',a:210,u:'g'},{n:'시금치',a:50,u:'g'},{n:'콩나물',a:50,u:'g'},{n:'당근',a:30,u:'g'},{n:'애호박',a:50,u:'g'},{n:'계란',a:1,u:'개'},{n:'참기름',a:1,u:'작은술'},{n:'고추장',a:0.5,u:'큰술'}],
+  steps:['시금치와 콩나물은 데쳐서 물기를 짜고 참기름에 무칩니다.','당근과 애호박은 채 썰어 기름 없이 볶습니다.','그릇에 밥과 나물을 담고 계란 프라이를 올립니다.','고추장을 올려 비빕니다.'],
+  nut:{kcal:520,carb:80,protein:20,fat:13,na:620},adjust:'고추장은 반 큰술에서 더 줄이면 나트륨이 줄어요. 밥을 2/3 공기로 줄이면 혈당 부담이 줄어요.',origin:'sample'}
+];
+
+const COND = [{k:'d',n:'당뇨',s:'당'},{k:'h',n:'고혈압',s:'혈압'},{k:'l',n:'고지혈증',s:'지질'},{k:'t',n:'갑상선기능저하증',s:'갑상선'},{k:'m',n:'갱년기',s:'갱년기'}];
+const FOOD_CATS = ['채소','과일','곡류','콩류','육류','생선','해산물','해조류','유제품','달걀','견과·씨앗','버섯','가공식품','음료'];
+const SPICE_CATS = ['장류','양념','기름','소스'];
+const RECIPE_TAGS = ['당뇨식','저염식','콜레스테롤 관리식','단백질 식단','갱년기 건강 식단'];
+const UNITS = ['g','kg','ml','L','개','큰술','작은술','컵','쪽','장','마리','꼬집'];
+
+'use strict';
+/* ===== 도구 ===== */
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const clone = o => JSON.parse(JSON.stringify(o));
+const z2 = n => String(n).padStart(2, '0');
+const ymd = d => d.getFullYear() + '-' + z2(d.getMonth() + 1) + '-' + z2(d.getDate());
+const TODAY = ymd(new Date());
+const parseYmd = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (s, n) => { const d = parseYmd(s); d.setDate(d.getDate() + n); return ymd(d); };
+const dayDiff = (a, b) => Math.round((parseYmd(b) - parseYmd(a)) / 86400000);
+const WD = ['일', '월', '화', '수', '목', '금', '토'];
+const fmtDate = s => { const d = parseYmd(s); return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 ${WD[d.getDay()]}요일`; };
+const fmtShort = s => { const d = parseYmd(s); return `${d.getMonth() + 1}월 ${d.getDate()}일 (${WD[d.getDay()]})`; };
+const nf = (v, d = 1) => (v == null || isNaN(v)) ? '-' : String(Math.round(v * Math.pow(10, d)) / Math.pow(10, d));
+
+const ICON = {
+  food: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38c0-16 10-26 28-28 0 18-10 28-28 28z"/><path d="M10 38C16 28 22 22 30 18"/></svg>',
+  spice: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="17" width="24" height="25" rx="6"/><path d="M15 17v-5h18v5"/><path d="M18 27h12M18 34h12"/></svg>',
+  recipe: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22h36c0 10-7 18-18 18S6 32 6 22z"/><path d="M18 15c0-3 3-3 3-7M28 15c0-3 3-3 3-7"/></svg>',
+  health: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 41S7 31 7 19a9 9 0 0117-4 9 9 0 0117 4c0 12-17 22-17 22z"/></svg>',
+  home: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 22L24 8l17 14v18H7z"/><path d="M19 40V28h10v12"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg>',
+};
+
+/* ===== 적합도 ===== */
+const RANK = {g: 0, y: 1, r: 2, u: 3};
+const BADGE = {g: ['✓', '적합'], y: ['▲', '주의'], r: ['✖', '피하기'], u: ['?', '확인 필요']};
+const badge = (k, label) => !BADGE[k] ? '' : `<span class="badge b-${k}"><span aria-hidden="true">${BADGE[k][0]}</span>${label ? esc(label) + ' ' : ''}${BADGE[k][1]}</span>`;
+const worst = a => a.includes('r') ? 'r' : a.includes('y') ? 'y' : a.includes('u') ? 'u' : 'g';
+const ratingsFrom = str => { const o = {}; COND.forEach((c, i) => o[c.k] = str[i]); return o; };
+const activeConds = () => (S.profile.conditions && S.profile.conditions.length) ? S.profile.conditions : COND.map(c => c.k);
+const overall = (it, key = 'r') => it[key] ? worst(activeConds().map(k => it[key][k] || 'u')) : null;
+const rateFor = (it, cond) => cond && cond !== 'all' ? (it.r[cond] || 'u') : overall(it);
+
+/* ===== 기본 데이터 해석 ===== */
+function parseRaw() {
+  return FOOD_RAW.split('\n').filter(l => l.trim()).map(l => {
+    const p = l.split('|'); const n = p[4].split(',').map(Number), season = SPICE_CATS.includes(p[2]);
+    return {id: (season ? 's:' : 'f:') + p[0], kind: season ? 'spice' : 'food', name: p[0], en: p[1], cat: p[2], aliases: p[3] ? p[3].split(';') : [],
+      nut: {kcal: n[0], carb: n[1], protein: n[2], fat: n[3], na: n[4]}, r: ratingsFrom(p[5]), r2: null, memo: p[6], src: 'seed', updated: SEED_DATE};
+  });
+}
+const SEED_ALL = parseRaw();
+const SEED_FOODS = SEED_ALL.filter(x => x.kind === 'food'), SEED_SPICES = SEED_ALL.filter(x => x.kind === 'spice');
+const foodsAll = () => SEED_FOODS.concat(S.foods);
+const spicesAll = () => SEED_SPICES.concat(S.spices);
+const allItems = () => foodsAll().concat(spicesAll());
+function findItem(name) { const n = norm(name); return allItems().find(it => norm(it.name) === n || (it.aliases || []).some(a => norm(a) === n)); }
+function findItemById(id) { return allItems().find(it => it.id === id); }
+function dupOf(name, aliases, en, selfId) {
+  const keys = [name, ...(aliases || []), en].map(norm).filter(Boolean);
+  return allItems().find(it => it.id !== selfId && [it.name, ...(it.aliases || []), it.en].map(norm).filter(Boolean).some(k => keys.includes(k)));
+}
+function statusOf(it) {
+  const rv = S.reviews[it.id];
+  if (rv) return {key: 'reviewed', label: '검수 완료', cls: 'ok', date: rv.date, note: rv.note};
+  if (it.src === 'seed') return {key: 'pending', label: '기본 수록 · 검토 대기', cls: ''};
+  if (it.src === 'user') return {key: 'user', label: '내가 입력', cls: 'user'};
+  return {key: 'ai', label: 'AI 분석 · 검토 대기', cls: 'ai'};
+}
+
+/* ===== 검색(부분, 별칭, 오타, 초성) ===== */
+const CH_L = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+const CH_V = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ','ㅚ','ㅛ','ㅜ','ㅝ','ㅞ','ㅟ','ㅠ','ㅡ','ㅢ','ㅣ'];
+const CH_T = ['','ㄱ','ㄲ','ㄳ','ㄴ','ㄵ','ㄶ','ㄷ','ㄹ','ㄺ','ㄻ','ㄼ','ㄽ','ㄾ','ㄿ','ㅀ','ㅁ','ㅂ','ㅄ','ㅅ','ㅆ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+function jamo(s) { let o = ''; for (const ch of s) { const c = ch.charCodeAt(0) - 0xAC00; o += (c >= 0 && c < 11172) ? CH_L[Math.floor(c / 588)] + CH_V[Math.floor(c % 588 / 28)] + CH_T[c % 28] : ch; } return o; }
+function initials(s) { let o = ''; for (const ch of s) { const c = ch.charCodeAt(0) - 0xAC00; o += (c >= 0 && c < 11172) ? CH_L[Math.floor(c / 588)] : ch; } return o; }
+const norm = s => String(s || '').toLowerCase().replace(/\s+/g, '');
+function lev(a, b) {
+  if (a === b) return 0; if (!a.length) return b.length; if (!b.length) return a.length;
+  let prev = Array.from({length: b.length + 1}, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[b.length];
+}
+function matchScore(it, q) {
+  const nq = norm(q); if (!nq) return 1;
+  const names = [it.name, ...(it.aliases || []), it.en || ''].map(norm).filter(Boolean);
+  let best = 0;
+  for (const n of names) {
+    if (n === nq) best = Math.max(best, 100); else if (n.startsWith(nq)) best = Math.max(best, 80); else if (n.includes(nq)) best = Math.max(best, 60);
+  }
+  if (best) return best;
+  if (/^[ㄱ-ㅎ]+$/.test(nq)) { for (const n of names) if (initials(n).includes(nq)) return 50; return 0; }
+  const jq = jamo(nq); if (jq.length < 3) return 0;
+  const th = jq.length >= 7 ? 2 : 1;
+  for (const n of names) {
+    const jn = jamo(n);
+    if (jn.includes(jq)) return 55;
+    const d = lev(jn, jq); if (d <= th) best = Math.max(best, 30 - d);
+    if (jn.length > jq.length) { const d2 = lev(jn.slice(0, jq.length), jq); if (d2 <= th) best = Math.max(best, 28 - d2); }
+  }
+  return best;
+}
+
+/* ===== 상태와 저장 ===== */
+const defaultState = () => ({
+  v: 1,
+  profile: {height: null, birth: '', conditions: COND.map(c => c.k), meds: '', menopause: 'unknown', setupDone: false},
+  days: {}, periods: [], meals: [], foods: [], spices: [], recipes: clone(SEED_RECIPES).map(r => Object.assign(r, {updated: SEED_DATE})),
+  favs: [], shopping: [], reviews: {}, savedAt: null
+});
+let S = defaultState();
+const store = {
+  mode: 'none', _db: null,
+  open() {
+    if (this._db) return this._db;
+    this._db = new Promise((res, rej) => {
+      const to = setTimeout(() => rej(new Error('timeout')), 3000);
+      try {
+        const rq = indexedDB.open('momHealthDiary', 1);
+        rq.onupgradeneeded = () => rq.result.createObjectStore('kv');
+        rq.onsuccess = () => { clearTimeout(to); res(rq.result); };
+        rq.onerror = () => { clearTimeout(to); rej(rq.error); };
+      } catch (e) { clearTimeout(to); rej(e); }
+    });
+    return this._db;
+  },
+  async load() {
+    try { const db = await this.open(); const v = await new Promise((res, rej) => { const r = db.transaction('kv').objectStore('kv').get('state'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); this.mode = 'idb'; if (v) return v; } catch (e) { this._db = null; }
+    try { const t = localStorage.getItem('momHealthDiary.state'); if (t) { this.mode = 'ls'; return JSON.parse(t); } } catch (e) {}
+    return null;
+  },
+  async save(s) {
+    try { const db = await this.open(); await new Promise((res, rej) => { const tx = db.transaction('kv', 'readwrite'); tx.objectStore('kv').put(s, 'state'); tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error); }); this.mode = 'idb'; return true; } catch (e) { this._db = null; }
+    try { localStorage.setItem('momHealthDiary.state', JSON.stringify(s)); this.mode = 'ls'; return true; } catch (e) { this.mode = 'mem'; return false; }
+  }
+};
+function mergeState(loaded) {
+  const d = defaultState();
+  if (!loaded || typeof loaded !== 'object') return d;
+  const o = Object.assign(d, loaded);
+  o.profile = Object.assign(defaultState().profile, loaded.profile || {});
+  ['days', 'reviews'].forEach(k => { if (!o[k] || typeof o[k] !== 'object') o[k] = {}; });
+  ['periods', 'meals', 'foods', 'spices', 'recipes', 'favs', 'shopping'].forEach(k => { if (!Array.isArray(o[k])) o[k] = d[k]; });
+  return o;
+}
+let saveTimer;
+function save() { S.savedAt = Date.now(); clearTimeout(saveTimer); saveTimer = setTimeout(async () => { const ok = await store.save(S); setFoot(ok); }, 250); sync.schedule(); }
+function setFoot(ok) {
+  const f = $('#foot'); if (!f) return;
+  const t = new Date(S.savedAt || Date.now()), hm = z2(t.getHours()) + ':' + z2(t.getMinutes());
+  let h;
+  if (sync.mode === 'shared') h = sync.err ? '<b>사이트에 저장하지 못했어요.</b> 잠시 뒤에 다시 시도해요.' : `같은 사이트를 여는 모든 기기에서 같은 기록을 봐요${S.savedAt ? ' · 마지막 저장 ' + hm : ''}`;
+  else if (sync.mode === 'readonly') h = '보기 전용이에요. 여기서 바꾼 내용은 저장되지 않아요.';
+  else h = ok === false ? '<b>저장소를 쓸 수 없어요.</b> 이 창을 닫으면 기록이 사라질 수 있으니 [홈 아래 데이터 백업]에서 파일로 보관하세요.' : `로그인 없이 열려 있어 기록이 이 기기의 이 브라우저에만 저장돼요${S.savedAt ? ' · 마지막 저장 ' + hm : ''}`;
+  f.innerHTML = h;
+}
+
+/* ===== 외부 기능(Claude 연결, 파일 저장) ===== */
+const caps = {};
+function cap(name) {
+  if (!caps[name]) caps[name] = (async () => {
+    try { if (!window.claude || !window.claude.use) return null; return await Promise.race([window.claude.use(name), new Promise(r => setTimeout(() => r(null), 12000))]); } catch (e) { return null; }
+  })();
+  return caps[name];
+}
+async function saveFile(filename, data, mime) {
+  const d = await cap('downloads');
+  if (d) { try { await d.save({filename, data}); toast('파일을 저장했어요'); } catch (e) { if (!e || e.code !== 'declined') toast('파일을 저장하지 못했어요'); } return; }
+  try { const b = new Blob([data], {type: mime || 'application/octet-stream'}); const u = URL.createObjectURL(b); const a = document.createElement('a'); a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 3000); toast('다운로드를 시작했어요'); } catch (e) { toast('이 화면에서는 파일 저장을 할 수 없어요'); }
+}
+
+/* ===== 알림, 모달 ===== */
+let toastTimer;
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, 2600); }
+const modals = [];
+function openModal(html) {
+  const bg = document.createElement('div'); bg.className = 'modal-bg';
+  bg.innerHTML = `<div class="modal" role="dialog" aria-modal="true">${html}</div>`;
+  bg._prev = document.activeElement;
+  document.body.appendChild(bg); modals.push(bg); document.body.style.overflow = 'hidden';
+  bg.addEventListener('mousedown', e => { if (e.target === bg) closeModal(bg); });
+  const f = $('input,select,textarea,button', $('.modal', bg)); if (f && f.tagName !== 'BUTTON') { /* 입력칸은 자동 포커스하지 않음 */ }
+  $('.x', bg) && $('.x', bg).focus({preventScroll: true});
+  return bg;
+}
+function closeModal(bg) {
+  bg = bg || modals[modals.length - 1]; if (!bg) return;
+  const i = modals.indexOf(bg); if (i >= 0) modals.splice(i, 1);
+  bg.remove(); if (!modals.length) document.body.style.overflow = '';
+  try { bg._prev && bg._prev.focus && bg._prev.focus({preventScroll: true}); } catch (e) {}
+}
+const topModal = () => modals[modals.length - 1] ? $('.modal', modals[modals.length - 1]) : null;
+function armed(t, label) {
+  if (t._armed) { clearTimeout(t._tm); t._armed = false; return true; }
+  t._armed = true; t._orig = t.innerHTML; t.textContent = label || '한 번 더 누르면 지워져요';
+  t._tm = setTimeout(() => { t._armed = false; t.innerHTML = t._orig; }, 4000); return false;
+}
+function fileToDataURL(file, max = 1000, q = 0.72) {
+  return new Promise((res, rej) => {
+    const fr = new FileReader();
+    fr.onerror = rej;
+    fr.onload = () => {
+      const img = new Image(); img.onerror = rej;
+      img.onload = () => {
+        const s = Math.min(1, max / Math.max(img.width, img.height));
+        const c = document.createElement('canvas'); c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); res(c.toDataURL('image/jpeg', q));
+      };
+      img.src = fr.result;
+    };
+    fr.readAsDataURL(file);
+  });
+}
+
+/* ===== 화면 상태, 라우터 ===== */
+const ui = {
+  cat: {food: {q: '', color: 'all', conds: ['h', 'd', 'l', 't'], cat: 'all', limit: 60}, spice: {q: '', color: 'all', conds: ['h', 'd', 'l', 't'], cat: 'all', limit: 60}},
+  rq: '', rtag: 'all', rlimit: 40,
+  tab: 'record', date: TODAY, calMonth: TODAY.slice(0, 7), range: 'week', skipSetup: false, albumLimit: 10,
+  mealEdit: null, mealPhotos: [], mealFoods: [], recipeServ: {}, recipeEditImg: undefined
+};
+const ROUTES = {home: 'viewHome', food: 'viewCatalog', spice: 'viewCatalog', recipe: 'viewRecipes', health: 'viewHealth'};
+const NAV = [['home', '홈', ICON.home], ['food', '식재료', ICON.food], ['spice', '조미료', ICON.spice], ['recipe', '레시피', ICON.recipe], ['health', '건강', ICON.health]];
+let curRoute = 'home';
+function route() {
+  const r = (location.hash || '#home').slice(1); curRoute = ROUTES[r] ? r : 'home';
+  $$('#nav a').forEach(a => a.setAttribute('aria-current', a.dataset.r === curRoute ? 'page' : 'false'));
+  const names = {home: '홈', food: '식재료', spice: '조미료', recipe: '레시피', health: '건강 상태'};
+  document.title = '엄마 미화씨의 건강 되찾기';
+  const fn = ROUTES[curRoute];
+  if (fn === 'viewCatalog') viewCatalog(curRoute); else ({viewHome, viewRecipes, viewHealth})[fn]();
+  window.scrollTo(0, 0);
+}
+function go(r) { if (location.hash === '#' + r) route(); else location.hash = '#' + r; }
+const main = () => $('#main');
+
+/* ===== 액션(클릭) 처리 ===== */
+const A = {};
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-act]');
+  if (!t) { const sb = $('#gdrop'); if (sb && !e.target.closest('.searchbox')) sb.hidden = true; return; }
+  const fn = A[t.dataset.act]; if (fn) { fn(t, e); }
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && modals.length) closeModal(); });
+A.close = () => closeModal();
+A.go = t => go(t.dataset.r);
+
+/* ===== 헤더 ===== */
+function buildHeader() {
+  const d = new Date();
+  $('#top').innerHTML = `
+    <div class="top-row">
+      <a class="brand" href="#home" aria-label="엄마 미화씨의 건강 되찾기 홈"><b>엄마 미화씨의 건강 되찾기</b></a>
+      <div class="today" aria-label="오늘 날짜">${fmtDate(TODAY)}</div>
+    </div>
+    <div class="searchbox">${ICON.search}<input id="gsearch" type="search" placeholder="식재료, 조미료, 레시피를 찾아보세요" autocomplete="off" aria-label="통합 검색"><div class="drop" id="gdrop" hidden></div></div>
+    <nav class="nav" id="nav" aria-label="주 메뉴">${NAV.map(n => `<a href="#${n[0]}" data-r="${n[0]}"><span>${n[1]}</span></a>`).join('')}</nav>`;
+  $('#gsearch').addEventListener('input', globalSearch);
+  $('#gsearch').addEventListener('focus', globalSearch);
+}
+function globalSearch() {
+  const q = $('#gsearch').value.trim(), dd = $('#gdrop');
+  if (!q) { dd.hidden = true; return; }
+  const res = [];
+  allItems().forEach(it => { const s = matchScore(it, q); if (s) res.push({s, it}); });
+  S.recipes.forEach(r => { const s = matchScore({name: r.name, aliases: r.tags}, q); if (s) res.push({s, r}); });
+  res.sort((a, b) => b.s - a.s || ((a.it || a.r).name).localeCompare((b.it || b.r).name, 'ko'));
+  const top = res.slice(0, 8);
+  dd.hidden = false;
+  dd.innerHTML = top.length ? top.map(x => x.it
+    ? `<button data-act="open-item" data-id="${esc(x.it.id)}"><span><b>${esc(x.it.name)}</b> <span class="muted small">${x.it.kind === 'food' ? '식재료' : '조미료'} · ${esc(x.it.cat)}</span></span>${badge(overall(x.it))}</button>`
+    : `<button data-act="open-recipe" data-id="${esc(x.r.id)}"><span><b>${esc(x.r.name)}</b> <span class="muted small">레시피</span></span><span class="tag">${x.r.servings}인분</span></button>`).join('')
+    : `<div class="small muted" style="padding:12px">비슷한 항목이 없어요. 식재료 페이지에서 검색하면 AI 분석도 쓸 수 있어요.</div><button data-act="search-go" data-q="${esc(q)}">식재료 페이지에서 "${esc(q)}" 찾기</button>`;
+}
+A['search-go'] = t => { ui.cat.food.q = t.dataset.q; $('#gdrop').hidden = true; go('food'); };
+
+/* ===== 사이트에 기록 저장 (같은 사이트를 여는 모든 기기가 같은 기록을 봐요) =====
+   저장 단위: diary/core, diary/days-YYYY-MM, items/*, recipes/*, meals/*, photos/*
+   문서 하나는 256KiB 이하여야 해서 사진은 한 장씩 따로 저장해요. */
+const photoIdCache = new Map();
+function photoId(p) { let id = photoIdCache.get(p); if (!id) { let h1 = 0x811c9dc5, h2 = 0x1b873593; for (let i = 0; i < p.length; i++) { const c = p.charCodeAt(i); h1 = Math.imul(h1 ^ c, 16777619); h2 = Math.imul(h2 ^ c, 2246822519); h2 ^= h2 >>> 13; } id = 'p' + (h1 >>> 0).toString(36) + (h2 >>> 0).toString(36) + p.length.toString(36); photoIdCache.set(p, id); } return id; }
+function serialize() {
+  const m = new Map();
+  m.set('diary/core', {v: 1, profile: S.profile, periods: S.periods, favs: S.favs, shopping: S.shopping, reviews: S.reviews});
+  const byMonth = {};
+  Object.keys(S.days).forEach(d => { (byMonth[d.slice(0, 7)] = byMonth[d.slice(0, 7)] || {})[d] = S.days[d]; });
+  Object.keys(byMonth).forEach(ym => m.set('diary/days-' + ym, {days: byMonth[ym]}));
+  S.foods.concat(S.spices).forEach(it => m.set('items/' + it.id, {item: it}));
+  S.recipes.forEach(r => m.set('recipes/' + r.id, {recipe: r}));
+  S.meals.forEach(me => {
+    const ids = (me.photos || []).map(p => { const id = photoId(p); m.set('photos/' + id, {d: p}); return id; });
+    m.set('meals/' + me.id, {meal: Object.assign({}, me, {photos: ids})});
+  });
+  return m;
+}
+const sigOf = (p, obj) => p.startsWith('photos/') ? '1' : JSON.stringify(obj);
+function fromRemote(c) {
+  const o = defaultState(); o.recipes = [];
+  const core = c.diary.get('core');
+  if (core) { o.profile = Object.assign(o.profile, core.profile || {}); o.periods = core.periods || []; o.favs = core.favs || []; o.shopping = core.shopping || []; o.reviews = core.reviews || {}; }
+  c.diary.forEach((v, id) => { if (id.startsWith('days-')) Object.assign(o.days, v.days || {}); });
+  c.items.forEach(v => { const it = v && v.item; if (it) (it.kind === 'spice' ? o.spices : o.foods).push(JSON.parse(JSON.stringify(it))); });
+  c.recipes.forEach(v => { if (v && v.recipe) o.recipes.push(JSON.parse(JSON.stringify(v.recipe))); });
+  c.meals.forEach(v => { const me = v && v.meal; if (!me) return; const x = JSON.parse(JSON.stringify(me)); x.photos = (me.photos || []).map(id => { const p = c.photos.get(id); return p ? p.d : null; }).filter(Boolean); o.meals.push(x); });
+  return o;
+}
+const sync = {
+  mode: 'local', db: null, cols: {diary: new Map(), items: new Map(), recipes: new Map(), meals: new Map(), photos: new Map()},
+  last: new Map(), sig: new Map(), dirty: false, flushing: false, stale: false, err: null, timer: null, ready: false,
+  async init(hasLocal) {
+    try {
+      const db = await cap('db'); if (!db) return;
+      this.db = db;
+      let canWrite = true; try { const u = await cap('user'); if (u) { const w = await u.can('data.write'); if (w === false) canWrite = false; } } catch (e) {}
+      await Promise.all(Object.keys(this.cols).map(n => this.sub(n)));
+      this.ready = true;
+      const hasRemote = this.cols.diary.has('core');
+      this.mode = canWrite ? 'shared' : 'readonly';
+      if (hasRemote) { this.adopt(); }
+      else if (canWrite) { this.last = new Map(); this.dirty = true; await this.flush(); }
+    } catch (e) { this.mode = 'local'; this.db = null; }
+  },
+  sub(name) {
+    return new Promise(res => {
+      let done = false; const fin = () => { if (!done) { done = true; res(); } };
+      const to = setTimeout(fin, 6000);
+      try {
+        this.db.collection(name).onSnapshot(snap => {
+          const m = new Map(); snap.docs.forEach(d => { if (d.exists) m.set(d.id, d.data()); }); this.cols[name] = m;
+          if (!done) { if (!snap.metadata.fromCache) { clearTimeout(to); fin(); } return; }
+          this.onRemote(name);
+        }, e => { clearTimeout(to); this.err = e; fin(); });
+      } catch (e) { clearTimeout(to); fin(); }
+    });
+  },
+  adopt() {
+    S = mergeState(fromRemote(this.cols)); this.last = new Map(); this.sig = new Map();
+    serialize().forEach((o, p) => this.last.set(p, sigOf(p, o)));
+    Object.keys(this.cols).forEach(n => this.cols[n].forEach((v, id) => this.sig.set(n + '/' + id, sigOf(n + '/' + id, v))));
+    store.save(S);
+  },
+  onRemote(name) {
+    const cur = new Map(); this.cols[name].forEach((v, id) => cur.set(name + '/' + id, sigOf(name + '/' + id, v)));
+    let changed = false;
+    cur.forEach((s, p) => { if (this.sig.get(p) !== s) changed = true; });
+    this.sig.forEach((s, p) => { if (p.startsWith(name + '/') && !cur.has(p)) changed = true; });
+    if (!changed) return;
+    cur.forEach((s, p) => this.sig.set(p, s));
+    [...this.sig.keys()].forEach(p => { if (p.startsWith(name + '/') && !cur.has(p)) this.sig.delete(p); });
+    if (this.dirty || this.flushing) { this.stale = true; return; }
+    this.applyRemote();
+  },
+  applyRemote() {
+    this.adopt();
+    const busy = modals.length || /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || '');
+    if (busy) toast('다른 기기에서 바뀐 기록이 있어요. 화면을 옮기면 반영돼요.'); else { route(); toast('다른 기기에서 바뀐 기록을 불러왔어요'); }
+    setFoot(true);
+  },
+  schedule() { if (this.mode !== 'shared') return; this.dirty = true; clearTimeout(this.timer); this.timer = setTimeout(() => this.flush(), 700); },
+  async flush() {
+    if (this.flushing || !this.dirty || this.mode !== 'shared') return;
+    this.flushing = true; this.dirty = false; let failed = false;
+    try {
+      const want = serialize(), writes = [];
+      want.forEach((o, p) => { if (p.startsWith('photos/') ? this.last.has(p) : this.last.get(p) === JSON.stringify(o)) return; writes.push([p, o]); });
+      const dels = [...this.last.keys()].filter(p => !want.has(p));
+      for (const [p, o] of writes) { await this.db.doc(p).set(JSON.parse(JSON.stringify(o))); const s = sigOf(p, o); this.last.set(p, s); this.sig.set(p, s); }
+      for (const p of dels) { await this.db.doc(p).delete(); this.last.delete(p); this.sig.delete(p); }
+      this.err = null;
+    } catch (e) {
+      failed = true; this.err = e;
+      if (e && e.code === 'quota_exceeded') toast('사이트 저장 공간이 가득 찼어요. 사진을 줄이거나 백업 후 정리해 주세요');
+      else if (e && e.code === 'invalid_argument') { this.mode = 'readonly'; toast('이 계정은 기록을 저장할 권한이 없어요'); }
+      else toast('저장이 잠시 안 됐어요. 곧 다시 시도해요');
+    } finally {
+      this.flushing = false;
+      if (failed && this.mode === 'shared') { this.dirty = true; clearTimeout(this.timer); this.timer = setTimeout(() => this.flush(), 8000); }
+      else if (this.dirty) this.schedule();
+      else if (this.stale) { this.stale = false; this.applyRemote(); }
+      setFoot(!failed);
+    }
+  }
+};
+function syncNote() {
+  return sync.mode === 'shared' ? '이 사이트에 접근할 수 있는 사람과 기기는 모두 같은 기록을 보고 함께 고쳐요. 건강 정보이니 공유할 사람은 신중히 정하세요.'
+    : sync.mode === 'readonly' ? '보기 전용 권한이라 여기서 바꾼 내용은 저장되지 않아요. 기록하려면 사이트 주인에게 편집 권한을 요청하세요.'
+    : '지금은 로그인 없이 열려 있어서 기록이 이 기기의 이 브라우저에만 저장돼요. 다른 기기와 공유되지 않으니 백업 파일을 만들어 두세요.';
+}
+
+/* ===== 식재료 / 조미료 목록 ===== */
+const KIND_NAME = {food: '식재료', spice: '조미료'};
+const CONDS_UI = [['h', '고혈압'], ['d', '당뇨'], ['l', '고지혈증'], ['t', '갑상선저하증']];
+function counts(kind) {
+  const seed = kind === 'food' ? SEED_FOODS : SEED_SPICES, mine = kind === 'food' ? S.foods : S.spices;
+  return {seed: seed.length, user: mine.filter(x => x.src === 'user').length, ai: mine.filter(x => x.src === 'ai').length, total: seed.length + mine.length};
+}
+function viewCatalog(kind) {
+  const F = ui.cat[kind], isFood = kind === 'food', c = counts(kind);
+  main().innerHTML = `
+  <div class="row sp"><h1>${KIND_NAME[kind]}</h1><button class="btn primary" data-act="item-add" data-kind="${kind}">+ 내 ${KIND_NAME[kind]} 추가</button></div>
+  <div class="card stack">
+    <div class="row sp"><b id="ccnt">등록 ${c.total}개</b><span class="small muted">기본 ${c.seed} · 내가 추가 ${c.user} · AI 추가 ${c.ai}</span></div>
+    <p class="small muted">공식 자료와 직접 대조한 항목만 '검수 완료'로 표시해요.</p>
+  </div>
+  <div class="card stack">
+    <div class="field"><label for="cq">이름으로 찾기 (부분 검색, 별칭, 오타, 초성 모두 가능)</label><input id="cq" type="search" value="${esc(F.q)}" placeholder="${isFood ? '예: 시금치, ㅅㄱㅊ, spinach' : '예: 간장, 쌈장, 소금'}" autocomplete="off"></div>
+    <div><div class="lbl">적합도 색상</div><div class="row" id="ccolor">${[['all', '전체'], ['g', '✓ 적합'], ['y', '▲ 주의'], ['r', '✖ 피하기'], ['u', '? 확인 필요']].map(x => `<button class="chip" data-act="c-color" data-v="${x[0]}" aria-pressed="${F.color === x[0]}">${x[1]}</button>`).join('')}</div></div>
+    <div class="form-grid">
+      <div class="field" style="grid-column:1/-1"><span class="lbl">질환 선택 (눌러서 켜고 끌 수 있어요. 켜진 질환을 모두 고려해서 보여 드려요)</span><div class="row" id="cconds">${CONDS_UI.map(x => `<button class="chip" data-act="c-cond" data-v="${x[0]}" aria-pressed="${F.conds.includes(x[0])}">${x[1]}</button>`).join('')}</div></div>
+      <div class="field"><label for="ccat">분류</label><select id="ccat"><option value="all">전체 분류</option>${(isFood ? FOOD_CATS : SPICE_CATS).map(x => `<option ${F.cat === x ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
+    </div>
+  </div>
+  ${isFood ? `<details class="card"><summary>약과 함께 드실 때 알아 두면 좋은 점</summary><div class="stack" style="margin-top:10px"><p>갑상선호르몬제(레보티록신 등)는 보통 아침 빈속에 먹고, 칼슘·철분 보충제와는 약 4시간 간격을 두라고 안내돼요. 우유, 치즈, 두유, 커피도 흡수에 영향을 줄 수 있어요.</p><p>자몽은 일부 스타틴과 일부 혈압약의 효과를 바꿀 수 있어요. 가공식품(라면, 햄, 소시지, 젓갈, 장류)은 나트륨이 많아서 혈압 관리에 부담이 돼요.</p><p class="small muted">정확한 복용 간격과 금기는 약 설명서와 의료진·약사의 안내를 따르세요.</p></div></details>` : ''}
+  <div id="clist" class="stack"></div>`;
+  $('#cq').addEventListener('input', e => { F.q = e.target.value; F.limit = 60; updateCatalog(kind); });
+  $('#ccat').addEventListener('change', e => { F.cat = e.target.value; F.limit = 60; updateCatalog(kind); });
+  main().dataset.kind = kind;
+  updateCatalog(kind);
+}
+A['c-color'] = t => { const kind = main().dataset.kind, F = ui.cat[kind]; F.color = t.dataset.v; F.limit = 60; $$('#ccolor .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === F.color)); updateCatalog(kind); };
+A['c-cond'] = t => { const kind = main().dataset.kind, F = ui.cat[kind], v = t.dataset.v; F.conds = F.conds.includes(v) ? F.conds.filter(x => x !== v) : F.conds.concat(v); F.limit = 60; t.setAttribute('aria-pressed', F.conds.includes(v)); updateCatalog(kind); };
+A['c-more'] = t => { const kind = main().dataset.kind; ui.cat[kind].limit += 60; updateCatalog(kind); };
+function catalogResults(kind) {
+  const F = ui.cat[kind], items = kind === 'food' ? foodsAll() : spicesAll(), out = [];
+  for (const it of items) {
+    if (F.cat !== 'all' && it.cat !== F.cat) continue;
+    const st = statusOf(it);
+    const rt = worst((F.conds.length ? F.conds : ['h', 'd', 'l', 't']).map(q => it.r[q] || 'u'));
+    if (F.color !== 'all' && rt !== F.color) continue;
+    const s = matchScore(it, F.q); if (!s) continue;
+    out.push({it, rt, s});
+  }
+  out.sort((a, b) => RANK[a.rt] - RANK[b.rt] || a.it.name.localeCompare(b.it.name, 'ko'));
+  return out;
+}
+function noteLine(it) {
+  const sel = ui.cat[it.kind].conds, parts = COND.filter(c => it.r[c.k] !== 'g' && (!sel.length || sel.includes(c.k))).map(c => `${c.s} ${BADGE[it.r[c.k]][0]}`);
+  return parts.length ? parts.join(' · ') : '선택한 질환 기준 적합';
+}
+function updateCatalog(kind) {
+  const F = ui.cat[kind], res = catalogResults(kind), box = $('#clist'); if (!box) return;
+  const shown = res.slice(0, F.limit), tot = counts(kind).total;
+  const filtered = F.q || F.color !== 'all' || F.cat !== 'all' || F.conds.length < 4;
+  let html = `<div class="small muted" aria-live="polite">${filtered ? `조건에 맞는 ${res.length}개 (전체 ${tot}개 중)` : `전체 ${tot}개`}를 초록 → 노랑 → 빨강 → 확인 필요 순, 같은 색 안에서는 가나다순으로 보여 드려요.</div>`;
+  if (res.length) {
+    html += `<div class="list">${shown.map(({it, rt}) => `
+      <button class="item dot-${rt}" data-act="open-item" data-id="${esc(it.id)}">
+        <div class="row sp" style="flex-wrap:nowrap"><span class="nm">${esc(it.name)}</span>${badge(rt)}</div>
+        <div class="small muted">${esc(it.en || '')}${it.en ? ' · ' : ''}${esc(it.cat)}${kind === 'spice' && it.r2 ? ' · 농축·보충제 ' + BADGE[overall(it, 'r2')][0] : ''}</div>
+        <div class="small">${esc(noteLine(it))}</div>
+        <div class="row" style="gap:6px">${tagsFor(it)}</div>
+      </button>`).join('')}</div>`;
+    if (res.length > shown.length) html += `<button class="btn" data-act="c-more">더 보기 (${res.length - shown.length}개 남음)</button>`;
+  } else if (F.q.trim()) {
+    html += `<div class="card stack"><h3>"${esc(F.q.trim())}" 검색 결과가 없어요</h3>
+      <p>목록에 없는 ${KIND_NAME[kind]}예요. AI가 정체, 영양, 질환별 주의사항을 분석해 줄 수 있어요. 결과는 '검토 대기'로만 저장되고, 근거가 부족하면 안전하다고 판단하지 않고 '확인 필요'로 남겨요.</p>
+      <div class="row"><button class="btn primary" data-act="ai-start" data-kind="${kind}" data-q="${esc(F.q.trim())}">AI로 분석하기</button><button class="btn" data-act="item-add" data-kind="${kind}" data-name="${esc(F.q.trim())}">직접 입력하기</button></div></div>`;
+  } else html += `<div class="note">조건에 맞는 항목이 없어요. 필터를 바꿔 보세요.</div>`;
+  box.innerHTML = html;
+}
+function tagsFor(it) {
+  const st = statusOf(it); let h = '';
+  if (st.key === 'reviewed') h += '<span class="tag ok">검수 완료</span>';
+  else if (st.key === 'ai') h += '<span class="tag ai">AI 분석 · 검토 대기</span>';
+  else if (st.key === 'user') h += '<span class="tag user">내가 입력</span>';
+  else h += '<span class="tag">검토 대기</span>';
+  return h;
+}
+
+/* ===== 상세 ===== */
+A['open-item'] = t => { const dd = $('#gdrop'); if (dd) dd.hidden = true; const it = findItemById(t.dataset.id); if (it) itemModal(it); };
+function condRows(it, key) {
+  const notes = (key === 'r2' ? it.notes2 : it.notes) || {};
+  return COND.map(c => `<div class="crow"><div class="t"><b>${c.n}</b>${notes[c.k] ? `<div class="small muted">${esc(notes[c.k])}</div>` : ''}</div>${badge(it[key][c.k])}</div>`).join('');
+}
+function itemModal(it) {
+  const isSpice = it.kind === 'spice', st = statusOf(it), ov = overall(it), n = it.nut;
+  const ai = it.ai || {};
+  const html = `
+  <div class="modal-top"><div><h2>${esc(it.name)}</h2><div class="muted small">${esc(it.en || '')}${it.en ? ' · ' : ''}${esc(it.cat)}${(it.aliases || []).length ? ' · 별칭: ' + esc(it.aliases.join(', ')) : ''}</div></div><button class="x" data-act="close" aria-label="닫기">✕</button></div>
+  <div class="row">${badge(ov, '내 상태 기준')}${tagsFor(it)}</div>
+  ${ov === 'r' ? `<div class="note bad"><b>피해야 하는 조건이 있어요.</b> 아래 질환별 설명에서 어떤 조건인지 확인하세요.</div>` : ''}
+  ${ov === 'u' ? `<div class="note">근거가 충분하지 않거나 약물 상호작용을 확인할 수 없는 항목이 있어요. 안전하다고 보지 말고 의료진·약사에게 확인하세요.</div>` : ''}
+  <div class="card stack"><h3>${'질환별 적합도'}</h3><div>${condRows(it, 'r')}</div>
+    <p class="small muted">전체 적합도는 가장 조심해야 하는 질환 기준이에요. ${S.profile.setupDone ? '건강 상태 페이지에 입력한 관리 질환(' + activeConds().map(k => COND.find(c => c.k === k).n).join(', ') + ')만 반영해요.' : '아직 관리 질환을 입력하지 않아 다섯 가지를 모두 반영해요.'}</p></div>
+  ${it.memo ? `<div class="card soft"><b>먹는 방법과 주의</b><p style="margin-top:6px">${esc(it.memo)}</p></div>` : ''}
+  ${isSpice && it.usage ? `<div class="card soft"><b>사용법</b><p style="margin-top:6px">${esc(it.usage)}</p></div>` : ''}
+  ${n && (n.kcal != null) ? `<div><div class="lbl" style="margin-bottom:6px">영양 성분 (100g 기준 대략값)</div><div class="kv"><div><b>${nf(n.kcal, 0)}</b><span>열량 kcal</span></div><div><b>${nf(n.carb)}</b><span>탄수화물 g</span></div><div><b>${nf(n.protein)}</b><span>단백질 g</span></div><div><b>${nf(n.fat)}</b><span>지방 g</span></div><div><b>${nf(n.na, 0)}</b><span>나트륨 mg</span></div></div></div>` : ''}
+  ${ai.uses || ai.amount || ai.thyroid_med || ai.basis ? `<div class="card stack">${ai.uses ? `<div><b>정체와 용도</b><p>${esc(ai.uses)}</p></div>` : ''}${ai.amount ? `<div><b>권장 섭취량·주의</b><p>${esc(ai.amount)}</p></div>` : ''}${ai.thyroid_med ? `<div><b>갑상선약 관련</b><p>${esc(ai.thyroid_med)}</p></div>` : ''}${ai.basis ? `<div><b>분류 근거</b><p>${esc(ai.basis)}</p></div>` : ''}</div>` : ''}
+  <div class="card soft stack small">
+    <b>출처와 확인 상태</b>
+    ${it.src === 'seed' ? '' : `<div>${it.src === 'ai' ? 'AI가 만든 분석 결과예요. 의학적으로 검증된 정보가 아니에요.' : '직접 입력한 내용이에요.'}</div>`}
+    ${(ai.sources || []).length ? `<div>AI가 제시한 출처(실제 확인 전): ${ai.sources.map(s => esc(s.name) + (s.note ? ' - ' + esc(s.note) : '')).join(' / ')}</div>` : (it.src === 'ai' ? '<div>AI가 제시한 출처가 없어요. 그래서 안전하다고 판단하지 않았어요.</div>' : '')}
+    ${it.sourceNote ? `<div>출처 메모: ${esc(it.sourceNote)}</div>` : ''}
+    <div>등록·갱신일: ${esc(it.updated || '-')}${st.key === 'reviewed' ? ` · 검수 완료 ${esc(st.date)}${st.note ? ' (' + esc(st.note) + ')' : ''}` : ''}</div>
+    <div>직접 확인하기: <a href="https://various.foodsafetykorea.go.kr/nutrient/" target="_blank" rel="noopener">식품영양성분 DB(식약처)</a> · <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central</a></div>
+  </div>
+  <div class="card soft stack">
+    ${st.key === 'reviewed' ? `<button class="btn sm" data-act="item-unreview" data-id="${esc(it.id)}">검수 완료 표시 해제</button>` :
+      `<div class="field"><label for="rvNote">공식 자료와 직접 대조했다면 확인한 곳을 적고 표시하세요</label><input id="rvNote" type="text" placeholder="예: 식약처 DB와 대조함"></div><button class="btn sm" data-act="item-review" data-id="${esc(it.id)}">검수 완료로 표시</button>`}
+  </div>
+  <div class="row">${it.src !== 'seed' ? `<button class="btn" data-act="item-edit" data-id="${esc(it.id)}">수정</button><button class="btn danger" data-act="item-del" data-id="${esc(it.id)}">삭제</button>` : ''}<button class="btn" data-act="close">닫기</button></div>`;
+  closeAllModals(); openModal(html);
+}
+function closeAllModals() { while (modals.length) closeModal(); }
+A['item-review'] = t => { const note = ($('#rvNote') || {}).value || ''; S.reviews[t.dataset.id] = {date: TODAY, note: note.trim()}; save(); const it = findItemById(t.dataset.id); itemModal(it); refreshCatalog(); toast('검수 완료로 표시했어요'); };
+A['item-unreview'] = t => { delete S.reviews[t.dataset.id]; save(); itemModal(findItemById(t.dataset.id)); refreshCatalog(); };
+A['item-del'] = t => {
+  if (!armed(t, '한 번 더 누르면 삭제돼요')) return;
+  const id = t.dataset.id; S.foods = S.foods.filter(x => x.id !== id); S.spices = S.spices.filter(x => x.id !== id); delete S.reviews[id];
+  save(); closeAllModals(); refreshCatalog(); toast('삭제했어요');
+};
+function refreshCatalog() { if (curRoute === 'food' || curRoute === 'spice') viewCatalogKeep(); if (curRoute === 'home') viewHome(); }
+function viewCatalogKeep() { const y = window.scrollY; viewCatalog(curRoute); window.scrollTo(0, y); }
+
+/* ===== 추가·수정 폼 ===== */
+const RSEL = (id, val, withNone) => `<select id="${id}">${withNone ? `<option value="-" ${val === '-' ? 'selected' : ''}>해당 없음</option>` : ''}${[['g', '✓ 적합'], ['y', '▲ 주의'], ['r', '✖ 피하기'], ['u', '? 확인 필요']].map(o => `<option value="${o[0]}" ${val === o[0] ? 'selected' : ''}>${o[1]}</option>`).join('')}</select>`;
+A['item-add'] = t => itemForm(t.dataset.kind, null, t.dataset.name || '');
+A['item-edit'] = t => itemForm(null, findItemById(t.dataset.id));
+function itemForm(kind, it, presetName) {
+  kind = kind || it.kind; const isSpice = kind === 'spice', cats = isSpice ? SPICE_CATS : FOOD_CATS;
+  const n = (it && it.nut) || {}, r = (it && it.r) || {}, r2 = it && it.r2;
+  closeAllModals();
+  openModal(`
+  <div class="modal-top"><h2>${it ? '수정' : '내 ' + KIND_NAME[kind] + ' 추가'}</h2><button class="x" data-act="close" aria-label="닫기">✕</button></div>
+  <form id="itemForm" class="stack" data-kind="${kind}" data-id="${it ? esc(it.id) : ''}" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="fName">이름 *</label><input id="fName" type="text" value="${esc(it ? it.name : presetName)}" required></div>
+      <div class="field"><label for="fEn">영어 이름</label><input id="fEn" type="text" value="${esc(it ? it.en : '')}"></div>
+      <div class="field"><label for="fCat">분류</label><select id="fCat">${cats.map(c => `<option ${it && it.cat === c ? 'selected' : ''}>${c}</option>`).join('')}</select></div>
+      <div class="field"><label for="fAl">별칭 (쉼표로 구분)</label><input id="fAl" type="text" value="${esc(it ? (it.aliases || []).join(', ') : '')}"></div>
+    </div>
+    <div class="lbl">영양 성분 (100g 기준, 모르면 비워 두세요)</div>
+    <div class="form-grid">${[['kcal', '열량 kcal'], ['carb', '탄수화물 g'], ['protein', '단백질 g'], ['fat', '지방 g'], ['na', '나트륨 mg']].map(x => `<div class="field"><label for="n_${x[0]}">${x[1]}</label><input id="n_${x[0]}" type="number" step="0.1" min="0" value="${n[x[0]] != null ? n[x[0]] : ''}"></div>`).join('')}</div>
+    <div class="lbl">질환별 적합도 (모르면 '확인 필요'로 두세요)</div>
+    <div class="form-grid">${COND.map(c => `<div class="field"><label for="r_${c.k}">${c.n}</label>${RSEL('r_' + c.k, r[c.k] || 'u')}</div>`).join('')}</div>
+    <div class="field"><label for="fMemo">먹는 방법과 주의</label><textarea id="fMemo">${esc(it ? it.memo : '')}</textarea></div>
+    <div class="field"><label for="fSrc">출처 메모 (어디서 확인했는지)</label><input id="fSrc" type="text" value="${esc(it ? it.sourceNote : '')}" placeholder="예: 병원 영양상담, 식약처 DB"></div>
+    <div id="fErr" class="note bad" hidden></div>
+    <div class="row"><button class="btn primary" type="submit">저장하기</button><button class="btn" type="button" data-act="close">취소</button></div>
+  </form>`);
+  $('#itemForm').addEventListener('submit', submitItemForm);
+}
+function submitItemForm(e) {
+  e.preventDefault();
+  const f = e.target, kind = f.dataset.kind, id = f.dataset.id, isSpice = kind === 'spice';
+  const err = m => { const b = $('#fErr'); b.hidden = false; b.textContent = m; };
+  const name = $('#fName').value.trim(); if (!name) return err('이름을 입력해 주세요.');
+  const aliases = $('#fAl').value.split(',').map(s => s.trim()).filter(Boolean), en = $('#fEn').value.trim();
+  const d = dupOf(name, aliases, en, id);
+  if (d) return err(`이미 "${d.name}"(${d.kind === 'food' ? '식재료' : '조미료'})이(가) 있어요. 같은 항목이면 새로 추가하지 말고 그 항목을 확인하세요.`);
+  const num = k => { const v = $('#n_' + k).value; return v === '' ? null : Number(v); };
+  const rec = {
+    id: id || ((kind === 'food' ? 'u:' : 'us:') + uid()), kind, name, en, cat: $('#fCat').value, aliases,
+    nut: {kcal: num('kcal'), carb: num('carb'), protein: num('protein'), fat: num('fat'), na: num('na')},
+    r: Object.fromEntries(COND.map(c => [c.k, $('#r_' + c.k).value])), memo: $('#fMemo').value.trim(), sourceNote: $('#fSrc').value.trim(),
+    src: 'user', updated: TODAY
+  };
+  if (false) {
+    rec.usage = $('#fUsage').value.trim(); rec.memo2 = $('#fMemo2').value.trim();
+    const x = COND.map(c => $('#r2_' + c.k).value); rec.r2 = x.every(v => v === '-') ? null : Object.fromEntries(COND.map((c, i) => [c.k, x[i] === '-' ? 'u' : x[i]]));
+  }
+  const arr = isSpice ? S.spices : S.foods;
+  if (id) { const i = arr.findIndex(x => x.id === id); if (i >= 0) { rec.src = arr[i].src; rec.ai = arr[i].ai; rec.notes = arr[i].notes; rec.notes2 = arr[i].notes2; arr[i] = rec; } } else arr.push(rec);
+  save(); closeAllModals(); refreshCatalog(); toast('저장했어요'); itemModal(rec);
+}
+
+/* ===== AI 분석 ===== */
+let aiCtl = null;
+A['ai-start'] = t => aiRun(t.dataset.kind, t.dataset.q);
+function aiPrompt(kind, q) {
+  const isSpice = kind === 'spice';
+  return `너는 한국어로 식품 영양 정보를 정리하는 도우미야. 사용자가 찾는 ${isSpice ? '조미료·장류·양념' : '식재료'} "${q}"를 분석해서 아래 JSON 하나로만 답해. JSON 밖의 글은 쓰지 마.
+대상 사용자는 당뇨, 고혈압, 고지혈증, 갑상선기능저하증(레보티록신 등 복용), 갱년기를 관리하는 중장년 여성이야.
+{
+ "identified": true 또는 false (실제 ${isSpice ? '조미료·장류·양념' : '식재료·식품'}로 확실히 식별될 때만 true),
+ "name": "한국어 대표 이름", "en": "영어 이름", "aliases": ["별칭"],
+ "category": "${(isSpice ? SPICE_CATS : FOOD_CATS).join('|')} 중 하나",
+ "uses": "정체와 일반적 용도 1~2문장",
+ "nutrition": {"kcal": 숫자 또는 null, "carb": 숫자 또는 null, "protein": 숫자 또는 null, "fat": 숫자 또는 null, "sodium_mg": 숫자 또는 null},
+ "ratings": {"d":"g|y|r|u","h":"g|y|r|u","l":"g|y|r|u","t":"g|y|r|u","m":"g|y|r|u"},
+ "notes": {"d":"당뇨 1문장","h":"고혈압 1문장","l":"고지혈증 1문장","t":"갑상선기능저하증과 관련 약물 1문장","m":"갱년기 1문장"},
+ "thyroid_med": "갑상선호르몬제와의 복용 간격이나 상호작용. 확실하지 않으면 '확인 필요'라고 적기",
+ "amount": "권장 섭취량 또는 섭취 시 주의점 1~2문장",
+ "basis": "분류 근거 1~2문장",
+ "sources": [{"name": "실제로 존재하는 신뢰 기관·자료 이름", "note": "무엇을 참고했는지"}],
+ "confidence": "high|medium|low"
+}
+규칙: g=질환 관리 식단에서 일반적으로 선택하기 좋음, y=섭취량·조리법·시간·복용 약에 따라 주의, r=특정 질환·약물 상호작용·알레르기로 피해야 할 명확한 이유가 있을 때만, u=근거가 부족하거나 확인할 수 없음. 근거가 불충분하거나 약물 상호작용을 알 수 없으면 반드시 u로 둔다. 치료 효과를 단정하지 말고 "식습관의 일부로 도움이 될 수 있다" 정도로만 쓴다. 출처는 확실히 아는 기관(식품의약품안전처, 질병관리청, 대한당뇨병학회, 대한고혈압학회, 대한갑상선학회, USDA FoodData Central 등)만 적고 모르면 빈 배열로 둔다. URL은 쓰지 않는다.`;
+}
+function sanitizeAI(kind, j, q) {
+  const isSpice = kind === 'spice', R = v => ['g', 'y', 'r', 'u'].includes(v) ? v : 'u';
+  const rr = o => Object.fromEntries(COND.map(c => [c.k, R(o && o[c.k])]));
+  const rec = {id: (isSpice ? 'as:' : 'a:') + uid(), kind, name: String(j.name || q).trim(), en: String(j.en || '').trim(), cat: (isSpice ? SPICE_CATS : FOOD_CATS).includes(j.category) ? j.category : (isSpice ? '양념' : '가공식품'),
+    aliases: Array.isArray(j.aliases) ? j.aliases.map(String).filter(Boolean).slice(0, 6) : [], r: rr(j.ratings), src: 'ai', updated: TODAY,
+    nut: {kcal: numOrNull(j.nutrition && j.nutrition.kcal), carb: numOrNull(j.nutrition && j.nutrition.carb), protein: numOrNull(j.nutrition && j.nutrition.protein), fat: numOrNull(j.nutrition && j.nutrition.fat), na: numOrNull(j.nutrition && j.nutrition.sodium_mg)},
+    notes: Object.fromEntries(COND.map(c => [c.k, String((j.notes && j.notes[c.k]) || '')])), memo: String(j.amount || ''),
+    ai: {uses: String(j.uses || ''), amount: String(j.amount || ''), thyroid_med: String(j.thyroid_med || ''), basis: String(j.basis || ''), confidence: ['high', 'medium', 'low'].includes(j.confidence) ? j.confidence : 'low',
+      sources: Array.isArray(j.sources) ? j.sources.filter(s => s && s.name).map(s => ({name: String(s.name), note: String(s.note || '')})).slice(0, 5) : []}};
+  rec.r2 = null;
+  const downgrade = [];
+  const weak = !rec.ai.sources.length || rec.ai.confidence === 'low';
+  const thyUnknown = !rec.ai.thyroid_med || /확인\s*필요|알 수 없|불명/.test(rec.ai.thyroid_med);
+  COND.forEach(c => { if (rec.r[c.k] === 'g' && (weak || (c.k === 't' && thyUnknown))) { rec.r[c.k] = 'u'; downgrade.push(c.n); } });
+  rec.ai.downgraded = downgrade;
+  return rec;
+}
+const numOrNull = v => (v == null || v === '' || isNaN(Number(v))) ? null : Number(v);
+async function aiRun(kind, q) {
+  closeAllModals();
+  const bg = openModal(`<div class="modal-top"><h2>AI 분석: ${esc(q)}</h2><button class="x" data-act="ai-cancel" aria-label="닫기">✕</button></div><div id="aiBody" class="stack"><div class="note info" id="aiStat">AI 연결을 확인하는 중이에요…</div></div>`);
+  const body = $('#aiBody', bg), sample = await cap('sample');
+  if (!sample) {
+    body.innerHTML = `<div class="note"><b>AI 분석이 연결되어 있지 않아요.</b> 이 화면에서는 AI를 쓸 수 없어서 분석은 하지 않았어요. 기존 검색과 기록은 모두 그대로 쓸 수 있어요.</div>
+      <div class="row"><button class="btn primary" data-act="item-add" data-kind="${kind}" data-name="${esc(q)}">직접 입력하기</button><button class="btn" data-act="ai-demo" data-kind="${kind}" data-q="${esc(q)}">예시 화면으로 둘러보기</button></div>
+      <p class="small muted">예시 화면은 실제 분석이 아니라 화면 구성을 보여 주는 가짜 결과이고 저장할 수 없어요.</p>`;
+    return;
+  }
+  aiCtl = new AbortController();
+  body.innerHTML = `<div class="note info" id="aiStat">AI가 분석하는 중이에요. 보통 10~60초 걸려요. 처음에는 허용 여부를 묻는 창이 나올 수 있어요.</div><button class="btn" data-act="ai-cancel">그만두기</button>`;
+  try {
+    const j = await sample.json(aiPrompt(kind, q), {signal: aiCtl.signal, cache: false});
+    if (!j || typeof j !== 'object') throw {code: 'invalid_json'};
+    if (j.identified === false) { body.innerHTML = `<div class="note">"${esc(q)}"을(를) ${KIND_NAME[kind]}로 확실히 식별하지 못했어요. 철자를 확인하거나 직접 입력해 주세요.</div><div class="row"><button class="btn primary" data-act="item-add" data-kind="${kind}" data-name="${esc(q)}">직접 입력하기</button><button class="btn" data-act="close">닫기</button></div>`; return; }
+    aiShow(kind, sanitizeAI(kind, j, q), body);
+  } catch (e) {
+    const code = e && e.code, msg = {cancelled: '', not_granted: 'AI 사용을 허용하지 않아서 분석하지 못했어요.', rate_limited: '요청이 너무 많거나 사용 한도에 도달했어요. 잠시 뒤에 다시 시도해 주세요.', invalid_json: 'AI 답변을 읽지 못했어요. 다시 시도하거나 직접 입력해 주세요.', sampling_disabled: '이 계정에서는 AI를 쓸 수 없어요.'}[code];
+    if (code === 'cancelled') return;
+    body.innerHTML = `<div class="note bad">${msg || 'AI 분석에 실패했어요. 인터넷 연결을 확인하고 다시 시도해 주세요.'}</div><div class="row"><button class="btn primary" data-act="ai-start" data-kind="${kind}" data-q="${esc(q)}">다시 시도</button><button class="btn" data-act="item-add" data-kind="${kind}" data-name="${esc(q)}">직접 입력하기</button></div>`;
+  }
+}
+A['ai-cancel'] = () => { try { aiCtl && aiCtl.abort(); } catch (e) {} closeAllModals(); };
+A['ai-demo'] = t => {
+  const kind = t.dataset.kind, q = t.dataset.q;
+  const rec = {id: 'demo', kind, name: q, en: '(예시)', cat: kind === 'food' ? '가공식품' : '조미료', aliases: [], r: {d: 'u', h: 'y', l: 'u', t: 'u', m: 'g'}, src: 'ai', updated: TODAY, nut: {}, memo: '예시 문장입니다. 실제 분석 결과가 아니에요.',
+    notes: {d: '예시: 근거를 확인할 수 없어요.', h: '예시: 나트륨이 많을 수 있어요.', l: '예시: 확인 필요.', t: '예시: 약과 간격 확인 필요.', m: '예시: 일반적으로 문제가 적어요.'}, ai: {uses: '예시 화면이에요.', amount: '', thyroid_med: '확인 필요', basis: '예시', confidence: 'low', sources: [], downgraded: []}};
+  aiShow(kind, rec, $('#aiBody'), true);
+};
+function aiShow(kind, rec, body, demo) {
+  window._aiRec = rec;
+  const dup = demo ? null : dupOf(rec.name, rec.aliases, rec.en);
+  body.innerHTML = `
+  ${demo ? '<div class="note bad"><b>예시 화면(실제 분석 아님)</b> 저장할 수 없어요.</div>' : '<div class="note"><b>AI가 만든 정보예요.</b> 의학적으로 검증된 정보가 아니고 틀릴 수 있어요. 저장하면 \'AI 분석 · 검토 대기\'로 표시돼요.</div>'}
+  <div class="row"><h3>${esc(rec.name)}</h3><span class="muted small">${esc(rec.en)} · ${esc(rec.cat)}</span></div>
+  <div class="row">${badge(overall(rec), '내 상태 기준')}<span class="tag ai">AI 신뢰도 ${({high: '높음', medium: '보통', low: '낮음'})[rec.ai.confidence]}</span></div>
+  ${rec.ai.downgraded.length ? `<div class="note">근거 또는 약물 정보가 부족해서 ${esc(rec.ai.downgraded.join(', '))} 항목을 '적합'이 아니라 '확인 필요'로 바꿨어요.</div>` : ''}
+  <div class="card stack"><div>${condRows(rec, 'r')}</div></div>
+  ${rec.r2 ? `<div class="card stack"><h3>농축·보충제 기준 ${badge(overall(rec, 'r2'))}</h3><p>${esc(rec.memo2)}</p></div>` : ''}
+  ${rec.ai.uses ? `<p><b>정체와 용도</b><br>${esc(rec.ai.uses)}</p>` : ''}${rec.ai.amount ? `<p><b>권장 섭취량·주의</b><br>${esc(rec.ai.amount)}</p>` : ''}${rec.ai.thyroid_med ? `<p><b>갑상선약 관련</b><br>${esc(rec.ai.thyroid_med)}</p>` : ''}${rec.ai.basis ? `<p><b>분류 근거</b><br>${esc(rec.ai.basis)}</p>` : ''}
+  <p class="small muted">AI가 제시한 출처(직접 확인 전): ${rec.ai.sources.length ? rec.ai.sources.map(s => esc(s.name)).join(', ') : '없음'}</p>
+  ${dup ? `<div class="note bad">이미 목록에 "${esc(dup.name)}"이(가) 있어요. 중복으로 저장하지 않아요.</div><div class="row"><button class="btn primary" data-act="open-item" data-id="${esc(dup.id)}">기존 항목 보기</button><button class="btn" data-act="close">닫기</button></div>`
+    : `<div class="row"><button class="btn primary" data-act="ai-save" ${demo ? 'disabled' : ''}>검토 대기로 저장</button><button class="btn" data-act="close">저장하지 않고 닫기</button></div>`}`;
+}
+A['ai-save'] = () => {
+  const rec = window._aiRec; if (!rec || rec.id === 'demo') return;
+  const d = dupOf(rec.name, rec.aliases, rec.en); if (d) { toast('이미 있는 항목이에요'); return; }
+  (rec.kind === 'spice' ? S.spices : S.foods).push(rec); save(); closeAllModals();
+  refreshCatalog(); toast('검토 대기로 저장했어요'); itemModal(rec);
+};
+
+/* ===== 레시피 ===== */
+const COUNT_UNITS = ['개', '쪽', '장', '마리'];
+function fmtAmt(a, u) {
+  if (u === 'g' && a >= 1000) { a /= 1000; u = 'kg'; } else if (u === 'ml' && a >= 1000) { a /= 1000; u = 'L'; }
+  let s;
+  if (a < 0.1 && a > 0) s = '조금';
+  else if (COUNT_UNITS.includes(u) || ['큰술', '작은술', '컵'].includes(u)) {
+    const whole = Math.floor(a + 1e-9), frac = a - whole;
+    const f = frac < 0.125 ? '' : frac < 0.375 ? '¼' : frac < 0.625 ? '½' : frac < 0.875 ? '¾' : '';
+    const w = frac >= 0.875 ? whole + 1 : whole;
+    s = (w ? w : '') + f; if (!s) s = '조금';
+  } else s = String(Math.round(a * 10) / 10);
+  return s === '조금' ? '조금' : s + u;
+}
+function scaleAmt(a, base, serv) { return a * serv / base; }
+function recipeNutText(r) { const n = r.nut || {}; return n.kcal == null ? '영양 정보 없음' : `1인분 ${nf(n.kcal, 0)}kcal · 단백질 ${nf(n.protein, 0)}g · 나트륨 ${nf(n.na, 0)}mg`; }
+function recipeImg(r) { return r.img ? `<img class="im" src="${r.img}" alt="${esc(r.name)} 사진">` : `<div class="ph">${ICON.recipe}</div>`; }
+function recipeScore(r) {
+  let red = 0, yel = 0, unk = 0, issues = [];
+  r.ing.forEach(i => { const it = findItem(i.n); if (!it) return; const rt = overall(it); if (rt === 'r') { red++; issues.push(i.n + ' ✖'); } else if (rt === 'y') { yel++; issues.push(i.n + ' ▲'); } else if (rt === 'u') unk++; });
+  const n = r.nut || {}; let bonus = 0;
+  if (n.na != null && n.na <= 600) bonus += 1;
+  if (n.protein != null && n.protein >= 15) bonus += 1;
+  if (r.tags && r.tags.length) bonus += 0.5;
+  return {red, yel, unk, issues, score: red * 10 + yel * 2 + unk - bonus};
+}
+function viewRecipes() {
+  const tags = ['all', ...RECIPE_TAGS, 'fav'];
+  main().innerHTML = `
+  <div class="row sp"><h1>레시피</h1><button class="btn primary" data-act="recipe-add">+ 내 레시피 등록</button></div>
+  <div id="rrec"></div>
+  <div class="card stack">
+    <div class="field"><label for="rq">레시피 이름이나 재료로 찾기</label><input id="rq" type="search" value="${esc(ui.rq)}" placeholder="예: 두부, 샐러드" autocomplete="off"></div>
+    <div class="row" id="rtags">${tags.map(t => `<button class="chip" data-act="r-tag" data-v="${t}" aria-pressed="${ui.rtag === t}">${t === 'all' ? '전체' : t === 'fav' ? '♥ 즐겨찾기' : t}</button>`).join('')}</div>
+  </div>
+  <div id="rlist"></div>
+  <div class="card stack" id="rshop"></div>`;
+  $('#rq').addEventListener('input', e => { ui.rq = e.target.value; ui.rlimit = 40; updateRecipes(); });
+  updateRecipes(); renderShopping();
+}
+A['r-tag'] = t => { ui.rtag = t.dataset.v; ui.rlimit = 40; $$('#rtags .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === ui.rtag)); updateRecipes(); };
+A['r-more'] = () => { ui.rlimit += 40; updateRecipes(); };
+function updateRecipes() {
+  const q = ui.rq.trim(), nq = norm(q);
+  let list = S.recipes.filter(r => {
+    if (ui.rtag === 'fav' ? !S.favs.includes(r.id) : (ui.rtag !== 'all' && !(r.tags || []).includes(ui.rtag))) return false;
+    if (!nq) return true;
+    return matchScore({name: r.name, aliases: r.tags}, q) > 0 || r.ing.some(i => norm(i.n).includes(nq));
+  });
+  list.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+  const card = r => `<div class="rcard"><button class="rcard" style="border:0;box-shadow:none;border-radius:0;width:100%" data-act="open-recipe" data-id="${esc(r.id)}" aria-label="${esc(r.name)} 자세히 보기">${recipeImg(r)}
+    <div class="bd"><h3>${esc(r.name)}</h3>
+    <div class="row" style="gap:6px"><span class="tag">⏱ ${r.minutes}분</span><span class="tag">${esc(r.level)}</span><span class="tag">${r.servings}인분</span><span class="tag ${r.origin === 'sample' ? '' : 'user'}">${r.origin === 'sample' ? '예시 레시피' : '내 레시피'}</span></div>
+    <div class="small">${esc(recipeNutText(r))}</div>
+    <div class="row" style="gap:6px">${(r.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></div></button>
+    <div style="padding:0 10px 8px;text-align:right"><button class="fav" data-act="r-fav" data-id="${esc(r.id)}" aria-pressed="${S.favs.includes(r.id)}" aria-label="즐겨찾기">${S.favs.includes(r.id) ? '♥' : '♡'}</button></div></div>`;
+  $('#rlist').innerHTML = list.length ? `<div class="small muted" style="margin-bottom:10px">${list.length}개의 레시피</div><div class="masonry">${list.slice(0, ui.rlimit).map(card).join('')}</div>${list.length > ui.rlimit ? '<button class="btn" data-act="r-more">더 보기</button>' : ''}`
+    : `<div class="note">조건에 맞는 레시피가 없어요. 직접 등록해 보세요.</div>`;
+  // 추천
+  const rec = S.recipes.map(r => ({r, s: recipeScore(r)})).sort((a, b) => a.s.score - b.s.score || a.r.name.localeCompare(b.r.name, 'ko')).slice(0, 3);
+  $('#rrec').innerHTML = S.recipes.length ? `<div class="card stack" style="background:var(--sage-soft)"><h2>내 상태에 맞춰 골라 봤어요</h2>
+    <p class="small">${S.profile.setupDone ? '관리 중인 질환(' + activeConds().map(k => COND.find(c => c.k === k).n).join(', ') + ')을 기준으로 재료 적합도, 나트륨, 단백질을 살펴봤어요.' : '건강 상태 페이지에서 관리 질환을 입력하면 더 맞게 골라요. 지금은 다섯 가지 질환을 모두 기준으로 해요.'}</p>
+    <div class="cards">${rec.map(({r, s}) => `<button class="item" data-act="open-recipe" data-id="${esc(r.id)}"><span class="nm">${esc(r.name)}</span><span class="small">${esc(recipeNutText(r))}</span><span class="small ${s.issues.length ? '' : 'muted'}">${s.issues.length ? '확인할 재료: ' + esc(s.issues.join(', ')) : '주의가 필요한 재료가 없어요'}</span></button>`).join('')}</div>
+    <p class="small muted">추천은 참고용이에요. 질환이 있다고 식품군 전체를 끊을 필요는 없고, 검사 결과와 의료진 지침이 우선이에요. 기본 레시피의 영양 수치는 대략값이에요.</p></div>` : '';
+}
+A['r-fav'] = t => { const id = t.dataset.id; S.favs = S.favs.includes(id) ? S.favs.filter(x => x !== id) : S.favs.concat(id); save(); if (curRoute === 'recipe') updateRecipes(); const m = $('#rdFav'); if (m) { m.textContent = S.favs.includes(id) ? '♥ 즐겨찾기 해제' : '♡ 즐겨찾기'; } };
+
+/* 상세 */
+A['open-recipe'] = t => { const dd = $('#gdrop'); if (dd) dd.hidden = true; const r = S.recipes.find(x => x.id === t.dataset.id); if (r) recipeModal(r); };
+function recipeModal(r) {
+  const serv = ui.recipeServ[r.id] || r.servings, f = serv / r.servings, n = r.nut || {};
+  const tot = k => n[k] == null ? '-' : nf(n[k] * serv, k === 'protein' || k === 'carb' || k === 'fat' ? 1 : 0);
+  const html = `
+  <div class="modal-top"><div><h2>${esc(r.name)}</h2><div class="row" style="gap:6px;margin-top:6px"><span class="tag">⏱ ${r.minutes}분</span><span class="tag">${esc(r.level)}</span><span class="tag ${r.origin === 'sample' ? '' : 'user'}">${r.origin === 'sample' ? '예시 레시피' : '내 레시피'}</span>${(r.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></div><button class="x" data-act="close" aria-label="닫기">✕</button></div>
+  ${r.img ? `<img class="rimg" src="${r.img}" alt="${esc(r.name)} 사진">` : `<div class="ph" style="border-radius:20px;aspect-ratio:16/8">${ICON.recipe}</div>`}
+  <div class="card stack">
+    <div class="row sp"><b>몇 인분 만들까요?</b><span class="small muted">원래 레시피: ${r.servings}인분</span></div>
+    <div class="row"><div class="stepper"><button data-act="serv-minus" data-id="${esc(r.id)}" aria-label="한 명 줄이기">−</button><input id="servIn" type="number" min="1" max="50" step="1" value="${serv}" aria-label="인분 수" data-id="${esc(r.id)}"><button data-act="serv-plus" data-id="${esc(r.id)}" aria-label="한 명 늘리기">+</button></div><span>인분</span>${serv !== r.servings ? `<button class="btn sm" data-act="serv-reset" data-id="${esc(r.id)}">원래대로</button>` : ''}</div>
+    ${f >= 2 || f <= 0.5 ? `<div class="note small">양이 크게 달라질 때는 양념과 소금을 비례보다 조금 적게 시작해서 맛을 보며 더하세요. 조리 시간은 양이 많으면 늘어나고 적으면 줄어들 수 있어요. 이 레시피의 안내: ${esc(r.adjust || '특별한 안내가 없어요.')}</div>` : (r.adjust ? `<div class="small muted">조리 팁: ${esc(r.adjust)}</div>` : '')}
+  </div>
+  <div class="card"><h3 style="margin-bottom:6px">재료 (${serv}인분)</h3>${r.ing.map(i => { const it = findItem(i.n); const rt = it ? overall(it) : null;
+      return `<div class="ing"><span>${esc(i.n)} ${rt ? badge(rt) : ''}</span><b>${esc(fmtAmt(scaleAmt(i.a, r.servings, serv), i.u))}</b></div>`; }).join('')}
+    <p class="small muted" style="margin-top:8px">배지는 식재료·조미료 목록의 내 상태 기준 적합도예요. 목록에 없는 재료는 표시하지 않아요.</p></div>
+  <div class="card stack"><h3>영양 정보 (대략값)</h3>
+    ${n.kcal == null ? '<p class="muted">입력된 영양 정보가 없어요.</p>' : `
+    <div class="lbl">1인분 기준</div><div class="kv"><div><b>${nf(n.kcal, 0)}</b><span>kcal</span></div><div><b>${nf(n.carb, 0)}</b><span>탄수화물 g</span></div><div><b>${nf(n.protein, 0)}</b><span>단백질 g</span></div><div><b>${nf(n.fat, 0)}</b><span>지방 g</span></div><div><b>${nf(n.na, 0)}</b><span>나트륨 mg</span></div></div>
+    <div class="lbl">${serv}인분 전체</div><div class="kv"><div><b>${tot('kcal')}</b><span>kcal</span></div><div><b>${tot('carb')}</b><span>탄수화물 g</span></div><div><b>${tot('protein')}</b><span>단백질 g</span></div><div><b>${tot('fat')}</b><span>지방 g</span></div><div><b>${tot('na')}</b><span>나트륨 mg</span></div></div>`}</div>
+  <div class="card"><h3 style="margin-bottom:6px">만드는 순서</h3><ol class="steps">${(r.steps || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol></div>
+  <div class="row"><button class="btn primary" data-act="shop-add" data-id="${esc(r.id)}">장보기 목록에 담기</button><button class="btn" id="rdFav" data-act="r-fav" data-id="${esc(r.id)}">${S.favs.includes(r.id) ? '♥ 즐겨찾기 해제' : '♡ 즐겨찾기'}</button><button class="btn" data-act="recipe-edit" data-id="${esc(r.id)}">수정</button><button class="btn danger" data-act="recipe-del" data-id="${esc(r.id)}">삭제</button></div>`;
+  closeAllModals(); openModal(html);
+  $('#servIn').addEventListener('change', e => setServ(r.id, Number(e.target.value)));
+}
+function setServ(id, v) { const r = S.recipes.find(x => x.id === id); if (!r) return; v = Math.max(1, Math.min(50, Math.round(v) || r.servings)); ui.recipeServ[id] = v; recipeModal(r); }
+A['serv-plus'] = t => { const r = S.recipes.find(x => x.id === t.dataset.id); setServ(r.id, (ui.recipeServ[r.id] || r.servings) + 1); };
+A['serv-minus'] = t => { const r = S.recipes.find(x => x.id === t.dataset.id); setServ(r.id, (ui.recipeServ[r.id] || r.servings) - 1); };
+A['serv-reset'] = t => { const r = S.recipes.find(x => x.id === t.dataset.id); delete ui.recipeServ[r.id]; recipeModal(r); };
+A['recipe-del'] = t => { if (!armed(t, '한 번 더 누르면 삭제돼요')) return; const id = t.dataset.id; S.recipes = S.recipes.filter(r => r.id !== id); S.favs = S.favs.filter(x => x !== id); save(); closeAllModals(); if (curRoute === 'recipe') viewRecipes(); toast('레시피를 삭제했어요'); };
+
+/* 장보기 */
+A['shop-add'] = t => {
+  const r = S.recipes.find(x => x.id === t.dataset.id), serv = ui.recipeServ[r.id] || r.servings;
+  r.ing.forEach(i => {
+    if (i.n === '물') return;
+    const amt = scaleAmt(i.a, r.servings, serv), ex = S.shopping.find(s => s.name === i.n && s.unit === i.u && !s.done);
+    if (ex) ex.amt += amt; else S.shopping.push({id: uid(), name: i.n, amt, unit: i.u, done: false, from: r.name});
+  });
+  save(); toast('장보기 목록에 담았어요 (물은 제외)'); renderShopping();
+};
+function renderShopping() {
+  const box = $('#rshop'); if (!box) return;
+  box.innerHTML = `<div class="row sp"><h2>장보기 목록</h2>${S.shopping.length ? '<button class="btn sm" data-act="shop-clear">모두 지우기</button>' : ''}</div>` +
+    (S.shopping.length ? S.shopping.map(s => `<div class="crow"><label class="check" style="flex:1"><input type="checkbox" data-act="shop-tick" data-id="${s.id}" ${s.done ? 'checked' : ''}><span style="${s.done ? 'text-decoration:line-through;color:var(--muted)' : ''}">${esc(s.name)} ${esc(fmtAmt(s.amt, s.unit))}</span></label><button class="btn sm" data-act="shop-del" data-id="${s.id}" aria-label="${esc(s.name)} 지우기">지우기</button></div>`).join('') + '<p class="small muted">같은 재료와 단위는 합쳐져요. 레시피 상세 화면에서 담으면 지금 정한 인분 수로 계산돼요.</p>'
+      : '<p class="muted">레시피 상세 화면에서 [장보기 목록에 담기]를 누르면 인분에 맞춘 재료가 여기에 모여요.</p>');
+}
+document.addEventListener('change', e => { const t = e.target; if (t.dataset && t.dataset.act === 'shop-tick') { const s = S.shopping.find(x => x.id === t.dataset.id); if (s) { s.done = t.checked; save(); renderShopping(); } } });
+A['shop-del'] = t => { S.shopping = S.shopping.filter(s => s.id !== t.dataset.id); save(); renderShopping(); };
+A['shop-clear'] = t => { if (!armed(t, '한 번 더 누르면 모두 지워져요')) return; S.shopping = []; save(); renderShopping(); };
+
+/* 등록·수정 */
+A['recipe-add'] = () => recipeForm(null);
+A['recipe-edit'] = t => recipeForm(S.recipes.find(r => r.id === t.dataset.id));
+function ingRow(i) {
+  return `<div class="irow"><div class="nm"><input type="text" list="dlIng" class="ing-n" aria-label="재료 이름" placeholder="재료 이름" value="${esc(i ? i.n : '')}"></div><input type="number" class="ing-a" step="0.1" min="0" aria-label="양" placeholder="양" value="${i ? i.a : ''}"><select class="ing-u" aria-label="단위">${UNITS.map(u => `<option ${i && i.u === u ? 'selected' : ''}>${u}</option>`).join('')}</select><button type="button" class="btn sm" data-act="ing-del" aria-label="재료 지우기">✕</button></div>`;
+}
+A['ing-del'] = t => { const rows = $$('.irow'); if (rows.length > 1) t.closest('.irow').remove(); else $$('input', t.closest('.irow')).forEach(i => i.value = ''); };
+A['ing-add'] = () => { $('#ingRows').insertAdjacentHTML('beforeend', ingRow(null)); const l = $$('.ing-n'); l[l.length - 1].focus(); };
+function recipeForm(r) {
+  const n = (r && r.nut) || {};
+  ui.recipeEditImg = r ? r.img : null; ui.recipeEditImgChanged = false;
+  closeAllModals();
+  openModal(`
+  <div class="modal-top"><h2>${r ? '레시피 수정' : '내 레시피 등록'}</h2><button class="x" data-act="close" aria-label="닫기">✕</button></div>
+  <form id="recipeForm" class="stack" data-id="${r ? esc(r.id) : ''}" novalidate>
+    <datalist id="dlIng">${allItems().map(i => `<option value="${esc(i.name)}"></option>`).join('')}</datalist>
+    <div class="field"><label for="rfName">요리 이름 *</label><input id="rfName" type="text" value="${esc(r ? r.name : '')}"></div>
+    <div class="form-grid">
+      <div class="field"><label for="rfServ">기준 인분 *</label><input id="rfServ" type="number" min="1" max="50" step="1" value="${r ? r.servings : 2}"></div>
+      <div class="field"><label for="rfMin">조리 시간(분)</label><input id="rfMin" type="number" min="1" step="1" value="${r ? r.minutes : 20}"></div>
+      <div class="field"><label for="rfLv">난이도</label><select id="rfLv">${['쉬움', '보통', '어려움'].map(l => `<option ${r && r.level === l ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
+    </div>
+    <div><div class="lbl">식단 종류</div><div class="checks">${RECIPE_TAGS.map(t => `<label class="check"><input type="checkbox" class="rf-tag" value="${t}" ${r && (r.tags || []).includes(t) ? 'checked' : ''}>${t}</label>`).join('')}</div></div>
+    <div><div class="lbl">재료 (식재료·조미료 목록에 있는 이름이면 적합도가 표시돼요)</div><div class="stack" id="ingRows" style="gap:8px">${(r ? r.ing : [null, null, null]).map(ingRow).join('')}</div><button type="button" class="btn sm" data-act="ing-add" style="margin-top:8px">+ 재료 줄 추가</button></div>
+    <div class="field"><label for="rfSteps">만드는 순서 (한 줄에 한 단계)</label><textarea id="rfSteps" rows="5">${esc(r ? (r.steps || []).join('\n') : '')}</textarea></div>
+    <div class="lbl">1인분 영양 정보 (모르면 비워 두세요)</div>
+    <div class="form-grid">${[['kcal', '열량 kcal'], ['carb', '탄수화물 g'], ['protein', '단백질 g'], ['fat', '지방 g'], ['na', '나트륨 mg']].map(x => `<div class="field"><label for="rn_${x[0]}">${x[1]}</label><input id="rn_${x[0]}" type="number" min="0" step="0.1" value="${n[x[0]] != null ? n[x[0]] : ''}"></div>`).join('')}</div>
+    <div class="field"><label for="rfAdj">인분이 바뀔 때 조절 안내</label><input id="rfAdj" type="text" value="${esc(r ? r.adjust : '')}" placeholder="예: 소금은 비례보다 조금 적게"></div>
+    <div><div class="lbl">대표 사진</div><div id="rfImg" class="stack"></div>
+      <div class="row" style="margin-top:8px"><label class="btn sm" for="rfFile">사진 고르기</label><input id="rfFile" type="file" accept="image/*" class="sr"><label class="btn sm" for="rfCam">카메라로 찍기</label><input id="rfCam" type="file" accept="image/*" capture="environment" class="sr"></div></div>
+    <div id="rfErr" class="note bad" hidden></div>
+    <div class="row"><button class="btn primary" type="submit">저장하기</button><button class="btn" type="button" data-act="close">취소</button></div>
+  </form>`);
+  drawRecipeImg();
+  $('#recipeForm').addEventListener('submit', submitRecipe);
+  ['rfFile', 'rfCam'].forEach(id => $('#' + id).addEventListener('change', async e => { const f = e.target.files[0]; if (!f) return; try { ui.recipeEditImg = await fileToDataURL(f, 900, 0.68); ui.recipeEditImgChanged = true; drawRecipeImg(); } catch (x) { toast('사진을 읽지 못했어요'); } e.target.value = ''; }));
+}
+function drawRecipeImg() {
+  const b = $('#rfImg'); if (!b) return;
+  b.innerHTML = ui.recipeEditImg ? `<img class="rimg" src="${ui.recipeEditImg}" alt="선택한 대표 사진"><button type="button" class="btn sm danger" data-act="rf-img-del" style="align-self:flex-start">사진 지우기</button>` : `<div class="ph" style="border-radius:20px;aspect-ratio:16/6">${ICON.recipe}</div><div class="small muted">사진이 없으면 기본 그림이 보여요.</div>`;
+}
+A['rf-img-del'] = () => { ui.recipeEditImg = null; ui.recipeEditImgChanged = true; drawRecipeImg(); };
+function submitRecipe(e) {
+  e.preventDefault();
+  const err = m => { const b = $('#rfErr'); b.hidden = false; b.textContent = m; };
+  const name = $('#rfName').value.trim(); if (!name) return err('요리 이름을 입력해 주세요.');
+  const serv = Number($('#rfServ').value); if (!(serv >= 1)) return err('기준 인분은 1 이상이어야 해요.');
+  const ing = $$('.irow').map(row => ({n: $('.ing-n', row).value.trim(), a: Number($('.ing-a', row).value), u: $('.ing-u', row).value})).filter(i => i.n);
+  if (!ing.length) return err('재료를 한 개 이상 입력해 주세요.');
+  if (ing.some(i => !(i.a > 0))) return err('재료마다 양을 0보다 크게 입력해 주세요.');
+  const nv = k => { const v = $('#rn_' + k).value; return v === '' ? null : Number(v); };
+  const id = $('#recipeForm').dataset.id, old = id ? S.recipes.find(x => x.id === id) : null;
+  const rec = {id: id || 'r-' + uid(), name, servings: Math.round(serv), minutes: Number($('#rfMin').value) || 0, level: $('#rfLv').value, tags: $$('.rf-tag').filter(c => c.checked).map(c => c.value), ing,
+    steps: $('#rfSteps').value.split('\n').map(s => s.trim()).filter(Boolean), nut: {kcal: nv('kcal'), carb: nv('carb'), protein: nv('protein'), fat: nv('fat'), na: nv('na')},
+    adjust: $('#rfAdj').value.trim(), img: ui.recipeEditImg || null, origin: old ? old.origin : 'user', updated: TODAY};
+  if (old) S.recipes[S.recipes.indexOf(old)] = rec; else S.recipes.unshift(rec);
+  delete ui.recipeServ[rec.id];
+  save(); closeAllModals(); if (curRoute === 'recipe') viewRecipes(); toast('레시피를 저장했어요'); recipeModal(rec);
+}
+
+/* ===== 건강 상태 ===== */
+const MOODS = [[1, '😢', '매우 나쁨'], [2, '😟', '나쁨'], [3, '😐', '보통'], [4, '🙂', '좋음'], [5, '😄', '매우 좋음']];
+const FATS = [[1, '피로하지 않음'], [2, '약간 피로함'], [3, '보통'], [4, '많이 피로함'], [5, '매우 피로함']];
+const SYMS = ['안면홍조', '야간 발한', '수면 문제', '기분 변화', '질 건조감'];
+const FLOWS = ['점상(조금 비침)', '적음', '보통', '많음'];
+const MEALS = ['아침', '점심', '저녁', '간식'];
+const MENO = {pre: '아직 생리를 해요', peri: '갱년기(폐경 전후)', post: '폐경 후', unknown: '말하고 싶지 않아요 / 모르겠어요'};
+const bmiOf = (w, h) => (w && h) ? w / Math.pow(h / 100, 2) : null;
+function bmiLabel(b) { return b < 18.5 ? '저체중' : b < 23 ? '정상 체중' : b < 25 ? '과체중(비만 전 단계)' : b < 30 ? '1단계 비만' : b < 35 ? '2단계 비만' : '3단계 비만'; }
+const sleepMsg = h => h <= 7 ? '엄마 오늘은 일찍 자ㅡㅡ' : '좋아 이렇게만 자는고야!!';
+const moodOf = v => MOODS.find(m => m[0] === v);
+const rec = d => S.days[d] || {};
+
+function viewHealth() {
+  if (!S.profile.setupDone && !ui.skipSetup) { main().innerHTML = setupHtml(); wireProfile(); return; }
+  const tabs = [['record', '오늘 기록'], ['charts', '그래프'], ['calendar', '달력'], ['cycle', '생리·갱년기'], ['meals', '식단 사진']];
+  main().innerHTML = `
+  <div class="row sp"><h1>건강 상태</h1><button class="btn sm" data-act="prof-edit">내 기본 정보</button></div>
+  <div class="tabs" id="htabs">${tabs.map(t => `<button class="chip" data-act="h-tab" data-v="${t[0]}" aria-pressed="${ui.tab === t[0]}">${t[1]}</button>`).join('')}</div>
+  <div id="hbody" class="stack"></div>`;
+  renderHealthBody();
+}
+A['h-tab'] = t => { ui.tab = t.dataset.v; $$('#htabs .chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === ui.tab)); renderHealthBody(); };
+function renderHealthBody() {
+  const b = $('#hbody'); if (!b) return;
+  const f = {record: tabRecord, charts: tabCharts, calendar: tabCalendar, cycle: tabCycle, meals: tabMeals}[ui.tab];
+  b.innerHTML = f();
+  if (ui.tab === 'record' || ui.tab === 'calendar') wireDay();
+  if (ui.tab === 'meals') wireMeal();
+}
+let _rz; window.addEventListener('resize', () => { clearTimeout(_rz); _rz = setTimeout(() => { if (curRoute === 'health' && ui.tab === 'charts') renderHealthBody(); }, 250); });
+
+/* 기본 정보 */
+function profileFields(p) {
+  return `
+  <div class="form-grid">
+    <div class="field"><label for="pHeight">키 (cm) *</label><input id="pHeight" type="number" step="0.1" min="100" max="220" inputmode="decimal" value="${p.height || ''}" placeholder="예: 160"></div>
+    <div class="field"><label for="pWeight">현재 몸무게 (kg)</label><input id="pWeight" type="number" step="0.1" min="20" max="300" inputmode="decimal" value="${rec(TODAY).weight ?? ''}" placeholder="예: 70"></div>
+    <div class="field"><label for="pBirth">생년월일 (선택)</label><input id="pBirth" type="date" value="${esc(p.birth || '')}" max="${TODAY}"></div>
+    <div class="field"><label for="pAge">또는 나이 (선택)</label><input id="pAge" type="number" min="1" max="120" value="${p.age || ''}"></div>
+  </div>
+  <div><div class="lbl">관리하는 건강 상태 (식재료 적합도 계산에 반영돼요)</div><div class="checks">${COND.map(c => `<label class="check"><input type="checkbox" class="p-cond" value="${c.k}" ${p.conditions.includes(c.k) ? 'checked' : ''}>${c.n}</label>`).join('')}</div></div>
+  <div class="field"><label for="pMeno">생리·폐경 상태 (선택)</label><select id="pMeno">${Object.entries(MENO).map(([k, v]) => `<option value="${k}" ${p.menopause === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+  <div class="field"><label for="pMeds">복용 중인 약 (선택, 이름만 적어 두세요)</label><textarea id="pMeds" placeholder="예: 레보티록신, 메트포르민">${esc(p.meds || '')}</textarea></div>
+  <div id="pErr" class="note bad" hidden></div>`;
+}
+function setupHtml() {
+  return `<h1>처음 오셨네요</h1><div class="card stack"><p>몇 가지만 알려 주세요. 키는 한 번만 적어 두면 몸무게를 기록할 때마다 자동으로 쓰여요. 나중에 언제든 바꿀 수 있어요.</p>
+  <form id="profForm" class="stack" data-mode="setup" novalidate>${profileFields(S.profile)}<div class="row"><button class="btn primary" type="submit">시작하기</button><button class="btn" type="button" data-act="skip-setup">나중에 할게요</button></div></form></div>`;
+}
+A['skip-setup'] = () => { ui.skipSetup = true; viewHealth(); };
+A['prof-edit'] = () => { closeAllModals(); openModal(`<div class="modal-top"><h2>내 기본 정보</h2><button class="x" data-act="close" aria-label="닫기">✕</button></div><form id="profForm" class="stack" data-mode="edit" novalidate>${profileFields(S.profile)}<div class="row"><button class="btn primary" type="submit">저장하기</button><button class="btn" type="button" data-act="close">취소</button></div></form>`); wireProfile(); };
+function wireProfile() {
+  const f = $('#profForm'); if (!f) return;
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const err = m => { const b = $('#pErr'); b.hidden = false; b.textContent = m; };
+    const h = $('#pHeight').value === '' ? null : Number($('#pHeight').value), w = $('#pWeight').value === '' ? null : Number($('#pWeight').value);
+    if (h != null && (h < 100 || h > 220)) return err('키는 100~220cm 사이로 입력해 주세요.');
+    if (w != null && (w < 20 || w > 300)) return err('몸무게는 20~300kg 사이로 입력해 주세요.');
+    S.profile = Object.assign(S.profile, {height: h, birth: $('#pBirth').value, age: $('#pAge').value ? Number($('#pAge').value) : null, conditions: $$('.p-cond').filter(c => c.checked).map(c => c.value), menopause: $('#pMeno').value, meds: $('#pMeds').value.trim(), setupDone: true});
+    if (w != null && w !== rec(TODAY).weight) { S.days[TODAY] = Object.assign(S.days[TODAY] || {}, {weight: w}); }
+    save(); closeAllModals(); ui.skipSetup = false; viewHealth(); toast('기본 정보를 저장했어요');
+  });
+}
+
+/* 날짜 이동 */
+function dateNav() {
+  return `<div class="row sp"><button class="btn sm" data-act="d-prev" aria-label="전날">◀ 전날</button><div class="field" style="flex:1;min-width:150px"><label class="sr" for="dateIn">날짜</label><input id="dateIn" type="date" value="${ui.date}" max="${TODAY}"></div><button class="btn sm" data-act="d-next" aria-label="다음날" ${ui.date >= TODAY ? 'disabled' : ''}>다음날 ▶</button></div>
+  <div class="small muted" style="margin-top:6px">${fmtDate(ui.date)}${ui.date === TODAY ? ' (오늘)' : ''}</div>`;
+}
+A['d-prev'] = () => { ui.date = addDays(ui.date, -1); renderHealthBody(); };
+A['d-next'] = () => { if (ui.date < TODAY) { ui.date = addDays(ui.date, 1); renderHealthBody(); } };
+document.addEventListener('change', e => { if (e.target.id === 'dateIn' && e.target.value && e.target.value <= TODAY) { ui.date = e.target.value; renderHealthBody(); } });
+
+/* 하루 기록 폼 */
+function dayForm(date) {
+  const d = rec(date), h = S.profile.height, post = S.profile.menopause === 'post';
+  return `<form id="dayForm" class="stack" data-date="${date}" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="dWeight">몸무게 (kg)</label><input id="dWeight" type="number" step="0.1" min="20" max="300" inputmode="decimal" value="${d.weight ?? ''}"></div>
+      <div class="field"><label for="dSleep">수면 시간 (시간)</label><input id="dSleep" type="number" step="0.5" min="0" max="24" inputmode="decimal" value="${d.sleep ?? ''}"></div>
+    </div>
+    <div id="bmiBox"></div><div id="sleepBox" aria-live="polite"></div>
+    <fieldset style="border:0;padding:0;margin:0"><legend class="lbl">오늘 컨디션</legend><div class="faces">${MOODS.map(m => `<label class="face"><input type="radio" name="mood" value="${m[0]}" ${d.mood === m[0] ? 'checked' : ''}><span><b aria-hidden="true">${m[1]}</b>${m[0]}점<br>${m[2]}</span></label>`).join('')}</div></fieldset>
+    <fieldset style="border:0;padding:0;margin:0"><legend class="lbl">피로도 (컨디션과 따로 기록해요)</legend><div class="faces">${FATS.map(m => `<label class="face"><input type="radio" name="fat" value="${m[0]}" ${d.fat === m[0] ? 'checked' : ''}><span><b aria-hidden="true">${m[0]}</b>${m[1]}</span></label>`).join('')}</div></fieldset>
+    <div class="card soft stack"><h3>생리·갱년기</h3>
+      <label class="check"><input type="checkbox" id="dBleed" ${d.bleed ? 'checked' : ''}> 출혈이 있었어요</label>
+      <div class="field"><label for="dFlow">출혈 양</label><select id="dFlow"><option value="">선택 안 함</option>${FLOWS.map(f => `<option ${d.flow === f ? 'selected' : ''}>${f}</option>`).join('')}</select></div>
+      ${post ? '<div class="note small">폐경 후에 생긴 출혈은 양이 적어도 기록해 두고, 진료 때 의료진과 꼭 상의하세요.</div>' : '<div class="small muted">출혈을 기록해도 앱이 정상 생리인지 판단하지는 않아요.</div>'}
+      <div><div class="lbl">오늘 있었던 증상</div><div class="checks">${SYMS.map(s => `<label class="check"><input type="checkbox" class="d-sym" value="${s}" ${(d.syms || []).includes(s) ? 'checked' : ''}>${s}</label>`).join('')}</div></div>
+      <div class="row"><button type="button" class="btn sm" data-act="per-start" data-date="${date}">이 날을 생리 시작일로 기록</button><button type="button" class="btn sm" data-act="per-end" data-date="${date}">이 날을 생리 마지막 날로 기록</button></div>
+    </div>
+    <div class="field"><label for="dNote">메모</label><textarea id="dNote" placeholder="오늘 몸이 어땠는지 적어 보세요">${esc(d.note || '')}</textarea></div>
+    <div class="row"><button class="btn primary" type="submit">${fmtShort(date)} 기록 저장</button>${S.days[date] ? `<button type="button" class="btn danger" data-act="day-del" data-date="${date}">이 날 기록 지우기</button>` : ''}</div>
+  </form>`;
+}
+function bmiBoxHtml(w) {
+  const h = S.profile.height;
+  if (!w) return '';
+  if (!h) return `<div class="note">BMI를 계산하려면 키가 필요해요. <button type="button" class="btn sm" data-act="prof-edit">키 입력하기</button></div>`;
+  const b = bmiOf(w, h);
+  return `<div class="note info"><b>BMI ${nf(b)}</b> · ${bmiLabel(b)}<div class="small muted">몸무게 ${nf(w)}kg ÷ 키 ${nf(h / 100, 2)}m의 제곱 · 키 ${nf(h)}cm는 기본 정보에 저장되어 있어요</div></div>`;
+}
+function wireDay() {
+  const f = $('#dayForm'); if (!f) return;
+  const upd = () => {
+    const w = parseFloat($('#dWeight').value), s = $('#dSleep').value;
+    $('#bmiBox').innerHTML = bmiBoxHtml(w > 0 ? w : null);
+    $('#sleepBox').innerHTML = s === '' || isNaN(Number(s)) ? '' : `<div class="msg ${Number(s) > 7 ? 'good' : ''}">${sleepMsg(Number(s))}</div>`;
+  };
+  $('#dWeight').addEventListener('input', upd); $('#dSleep').addEventListener('input', upd); upd();
+  f.addEventListener('submit', e => {
+    e.preventDefault(); const date = f.dataset.date;
+    const w = $('#dWeight').value === '' ? null : Number($('#dWeight').value), sl = $('#dSleep').value === '' ? null : Number($('#dSleep').value);
+    if (w != null && (!(w >= 20) || w > 300)) return toast('몸무게는 20~300kg 사이로 입력해 주세요');
+    if (sl != null && (sl < 0 || sl > 24)) return toast('수면 시간은 0~24시간 사이로 입력해 주세요');
+    const mood = $('input[name=mood]:checked', f), fat = $('input[name=fat]:checked', f);
+    const r = {weight: w, sleep: sl, mood: mood ? Number(mood.value) : null, fat: fat ? Number(fat.value) : null, bleed: $('#dBleed').checked, flow: $('#dFlow').value || null, syms: $$('.d-sym', f).filter(c => c.checked).map(c => c.value), note: $('#dNote').value.trim()};
+    Object.keys(r).forEach(k => { if (r[k] == null || r[k] === false || r[k] === '' || (Array.isArray(r[k]) && !r[k].length)) delete r[k]; });
+    if (r.flow && !r.bleed) delete r.flow;
+    if (Object.keys(r).length) S.days[date] = r; else delete S.days[date];
+    save(); toast('기록을 저장했어요'); renderHealthBody();
+  });
+}
+A['day-del'] = t => { if (!armed(t, '한 번 더 누르면 지워져요')) return; delete S.days[t.dataset.date]; save(); toast('기록을 지웠어요'); renderHealthBody(); };
+A['per-start'] = t => { const d = t.dataset.date; if (!S.periods.some(p => p.start === d)) S.periods.push({id: uid(), start: d, end: null}); save(); toast('생리 시작일로 기록했어요'); renderHealthBody(); };
+A['per-end'] = t => {
+  const d = t.dataset.date, p = S.periods.filter(x => x.start <= d && !x.end).sort((a, b) => b.start.localeCompare(a.start))[0];
+  if (!p) return toast('먼저 생리 시작일을 기록해 주세요'); p.end = d; save(); toast('마지막 날로 기록했어요'); renderHealthBody();
+};
+function dayMeals(date) {
+  const ms = S.meals.filter(m => m.date === date); if (!ms.length) return '<div class="small muted">이 날 기록된 식단이 없어요.</div>';
+  return `<div class="stack" style="gap:8px"><b>이 날의 식단</b>${ms.map(m => `<div class="small">${esc(m.type)} · ${esc(m.name || '이름 없음')} ${m.photos && m.photos.length ? '· 사진 ' + m.photos.length + '장' : ''}</div>`).join('')}<button class="btn sm" data-act="h-tab" data-v="meals">식단 사진 보기</button></div>`;
+}
+function tabRecord() {
+  const w = Object.keys(S.days).filter(d => S.days[d].weight != null).sort();
+  return `<div class="card stack">${dateNav()}${dayForm(ui.date)}${dayMeals(ui.date)}</div>
+  <div class="card stack"><h2>몸무게 기록</h2>${w.length ? w.slice().reverse().slice(0, 30).map((d, i, arr) => { const idx = w.indexOf(d), prev = idx > 0 ? S.days[w[idx - 1]].weight : null, cur = S.days[d].weight, b = bmiOf(cur, S.profile.height);
+    return `<div class="crow"><div class="t"><b>${fmtShort(d)}</b><div class="small muted">${nf(cur)}kg${b ? ' · BMI ' + nf(b) : ''}${prev != null ? ' · 이전 기록 대비 ' + (cur - prev >= 0 ? '+' : '') + nf(cur - prev) + 'kg' : ''}</div></div><div class="row" style="gap:6px"><button class="btn sm" data-act="w-edit" data-date="${d}">수정</button><button class="btn sm danger" data-act="w-del" data-date="${d}">삭제</button></div></div>`; }).join('') : '<p class="muted">아직 몸무게 기록이 없어요.</p>'}</div>`;
+}
+A['w-edit'] = t => { ui.date = t.dataset.date; renderHealthBody(); window.scrollTo(0, 0); };
+A['w-del'] = t => {
+  if (!armed(t, '한 번 더 누르면 삭제돼요')) return; const d = t.dataset.date; if (S.days[d]) { delete S.days[d].weight; if (!Object.keys(S.days[d]).length) delete S.days[d]; }
+  save(); toast('몸무게 기록을 삭제했어요'); renderHealthBody();
+};
+
+/* 그래프 */
+function niceTicks(lo, hi, n = 4) {
+  if (hi - lo < 1) { const mid = (hi + lo) / 2; lo = mid - 0.5; hi = mid + 0.5; }
+  const raw = (hi - lo) / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);
+  const a = Math.floor(lo / step + 1e-9) * step, b = Math.ceil(hi / step - 1e-9) * step, t = [];
+  for (let v = a; v <= b + step / 1000; v += step) t.push(Math.round(v * 100) / 100);
+  return t;
+}
+function lineChart(o) {
+  const W = Math.max(300, Math.min(720, window.innerWidth - 56)), H = 240, m = {l: 44, r: 20, t: 18, b: 34}, iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const lo = o.ticks[0], hi = o.ticks[o.ticks.length - 1];
+  const X = x => m.l + (o.xMax ? x / o.xMax * iw : iw / 2), Y = v => m.t + ih - (v - lo) / (hi - lo) * ih;
+  let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria)}">`;
+  o.ticks.forEach(t => { s += `<line class="gl" x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="ax" x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t}</text>`; });
+  for (let i = 0; i <= 4; i++) { const x = Math.round(o.xMax * i / 4), d = parseYmd(addDays(o.t0, x)); s += `<text class="ax" x="${X(x)}" y="${H - 10}" text-anchor="${i === 0 ? 'start' : i === 4 ? 'end' : 'middle'}">${d.getMonth() + 1}/${d.getDate()}</text>`; }
+  if (o.ref != null && o.ref >= lo && o.ref <= hi) s += `<line class="ref" x1="${m.l}" x2="${W - m.r}" y1="${Y(o.ref)}" y2="${Y(o.ref)}"/><text class="ax" x="${W - m.r}" y="${Y(o.ref) - 4}" text-anchor="end">${o.refLabel || ''}</text>`;
+  const p = o.pts;
+  if (!p.length) s += `<text class="ax" x="${W / 2}" y="${H / 2}" text-anchor="middle" style="font-size:14px">이 기간에는 기록이 없어요</text>`;
+  else {
+    if (p.length > 1) s += `<polyline class="${o.cls}" points="${p.map(q => X(q[0]) + ',' + Y(q[1])).join(' ')}"/>`;
+    p.forEach((q, i) => { s += i === p.length - 1 ? '' : `<circle class="${o.cls === 'ln1' ? 'pt1' : 'pt2'}" cx="${X(q[0])}" cy="${Y(q[1])}" r="4"><title>${q[2]}: ${q[1]}${o.unit || ''}</title></circle>`; });
+    const q = p[p.length - 1], lx = X(q[0]);
+    s += `<circle class="${o.cls === 'ln1' ? 'pt1' : 'pt2'}" cx="${lx}" cy="${Y(q[1])}" r="7"/><text class="lb" x="${lx > W - 60 ? lx - 10 : lx + 10}" y="${Y(q[1]) - 10}" text-anchor="${lx > W - 60 ? 'end' : 'start'}">${nf(q[1])}${o.unit || ''}</text>`;
+  }
+  return s + '</svg>';
+}
+function rangeInfo(key) {
+  const t1 = TODAY; let t0;
+  if (ui.range === 'week') t0 = addDays(t1, -6); else if (ui.range === 'month') t0 = addDays(t1, -29);
+  else { const ds = Object.keys(S.days).filter(d => S.days[d][key] != null).sort(); t0 = ds.length ? ds[0] : addDays(t1, -29); if (dayDiff(t0, t1) < 6) t0 = addDays(t1, -6); }
+  return {t0, t1, xMax: dayDiff(t0, t1)};
+}
+function seriesFor(key, ri) { return Object.keys(S.days).filter(d => S.days[d][key] != null && d >= ri.t0 && d <= ri.t1).sort().map(d => [dayDiff(ri.t0, d), S.days[d][key], d]); }
+function tabCharts() {
+  const wAll = Object.keys(S.days).filter(d => S.days[d].weight != null).sort(), ri = rangeInfo('weight'), wp = seriesFor('weight', ri);
+  const ys = wp.map(q => q[1]); const ticks = ys.length ? niceTicks(Math.min(...ys) - 1, Math.max(...ys) + 1) : niceTicks(50, 60);
+  const first = wAll[0], last = wAll[wAll.length - 1], fw = first ? S.days[first].weight : null, lw = last ? S.days[last].weight : null;
+  const h = S.profile.height, lb = lw && h ? bmiOf(lw, h) : null;
+  const inFirst = wp[0], inLast = wp[wp.length - 1];
+  const ch = (key, title, cls, aria, extra) => { const r = rangeInfo(key); return `<div class="card stack"><h2>${title}</h2>${lineChart(Object.assign({pts: seriesFor(key, r), xMax: r.xMax, t0: r.t0, cls, aria, ticks: [1, 2, 3, 4, 5]}, extra || {}))}</div>`; };
+  const rs = rangeInfo('sleep');
+  return `<div class="row" id="hrange">${[['week', '최근 1주'], ['month', '최근 1달'], ['all', '전체 기간']].map(x => `<button class="chip" data-act="h-range" data-v="${x[0]}" aria-pressed="${ui.range === x[0]}">${x[1]}</button>`).join('')}</div>
+  <div class="card stack"><h2>몸무게</h2>
+    <div class="kv"><div><b>${lw != null ? nf(lw) + 'kg' : '-'}</b><span>가장 최근 기록${last ? ' (' + fmtShort(last).split(' (')[0] + ')' : ''}</span></div>
+    <div><b>${lb ? nf(lb) : '-'}</b><span>${lb ? 'BMI · ' + bmiLabel(lb) : h ? 'BMI' : 'BMI (키가 필요해요)'}</span></div>
+    <div><b>${fw != null && lw != null && wAll.length > 1 ? (lw - fw >= 0 ? '+' : '') + nf(lw - fw) + 'kg' : '-'}</b><span>최초 기록 대비${first ? ' (' + fmtShort(first).split(' (')[0] + ' ' + nf(fw) + 'kg)' : ''}</span></div>
+    <div><b>${inFirst && inLast && wp.length > 1 ? (inLast[1] - inFirst[1] >= 0 ? '+' : '') + nf(inLast[1] - inFirst[1]) + 'kg' : '-'}</b><span>이 기간 변화</span></div></div>
+    ${lineChart({pts: wp, xMax: ri.xMax, t0: ri.t0, cls: 'ln1', aria: '몸무게 변화 그래프', ticks, unit: 'kg'})}
+    <p class="small muted">변화량은 사실만 보여 드려요. 목표 체중은 의료진과 정하세요.</p></div>
+  ${ch('mood', '컨디션 (1점 매우 나쁨 ~ 5점 매우 좋음)', 'ln1', '컨디션 변화 그래프')}
+  ${ch('fat', '피로도 (1점 피로하지 않음 ~ 5점 매우 피로함)', 'ln2', '피로도 변화 그래프')}
+  <div class="card stack"><h2>수면 시간</h2>${lineChart({pts: seriesFor('sleep', rs), xMax: rs.xMax, t0: rs.t0, cls: 'ln1', aria: '수면 시간 그래프', ticks: [0, 3, 6, 9, 12], unit: '시간', ref: 7, refLabel: '7시간'})}</div>`;
+}
+A['h-range'] = t => { ui.range = t.dataset.v; renderHealthBody(); };
+
+/* 달력 */
+function inPeriod(date) {
+  return S.periods.some(p => { const end = p.end || (dayDiff(p.start, TODAY) <= 14 && dayDiff(p.start, TODAY) >= 0 ? TODAY : p.start); return date >= p.start && date <= end; });
+}
+function tabCalendar() {
+  const [y, m] = ui.calMonth.split('-').map(Number), lead = new Date(y, m - 1, 1).getDay(), dim = new Date(y, m, 0).getDate();
+  let cells = WD.map(w => `<div class="wd">${w}</div>`).join('') + '<div class="day out"></div>'.repeat(lead);
+  for (let d = 1; d <= dim; d++) {
+    const date = `${y}-${z2(m)}-${z2(d)}`, r = rec(date), md = r.mood ? moodOf(r.mood) : null, meals = S.meals.filter(x => x.date === date).length;
+    const parts = [md ? '컨디션 ' + md[2] : '', meals ? '식단 ' + meals + '건' : '', r.bleed ? '출혈 기록' : '', (r.syms || []).length ? '증상 ' + r.syms.length + '개' : '', inPeriod(date) ? '생리 기간' : ''].filter(Boolean).join(', ');
+    cells += `<button class="day ${inPeriod(date) ? 'per' : ''} ${date === ui.date ? 'sel' : ''} ${date === TODAY ? 'td' : ''}" data-act="cal-pick" data-date="${date}" ${date > TODAY ? 'disabled style="opacity:.45;cursor:default"' : ''} aria-label="${m}월 ${d}일 ${parts}"><span class="n">${d}</span><span class="em" aria-hidden="true">${md ? md[1] : ''}</span><span class="ic" aria-hidden="true">${meals ? '<i class="dm"></i>' : ''}${r.bleed ? '<span class="dr">●</span>' : ''}${(r.syms || []).length ? '<span>✱</span>' : ''}</span></button>`;
+  }
+  return `<div class="card stack"><div class="row sp"><button class="btn sm" data-act="cal-m" data-v="-1" aria-label="이전 달">◀</button><h2>${y}년 ${m}월</h2><button class="btn sm" data-act="cal-m" data-v="1" aria-label="다음 달" ${ui.calMonth >= TODAY.slice(0, 7) ? 'disabled' : ''}>▶</button></div>
+  <div class="cal">${cells}</div>
+  <div class="legend"><span>표정 = 그날 컨디션</span><span><i class="dm"></i> 식단 기록</span><span><span class="dr">●</span> 출혈 기록</span><span>✱ 증상 기록</span><span style="background:var(--green2);padding:0 8px;border-radius:8px">생리 기간</span></div>
+  <button class="btn sm" data-act="cal-today" style="align-self:flex-start">오늘로 가기</button></div>
+  <div class="card stack"><h2>${fmtShort(ui.date)} 기록</h2>${dayForm(ui.date)}${dayMeals(ui.date)}</div>`;
+}
+A['cal-pick'] = t => { if (t.dataset.date > TODAY) return; ui.date = t.dataset.date; renderHealthBody(); const c = $('#dayForm'); c && c.scrollIntoView({behavior: 'smooth', block: 'start'}); };
+A['cal-m'] = t => { const [y, m] = ui.calMonth.split('-').map(Number), d = new Date(y, m - 1 + Number(t.dataset.v), 1); const nm = d.getFullYear() + '-' + z2(d.getMonth() + 1); if (nm <= TODAY.slice(0, 7)) { ui.calMonth = nm; renderHealthBody(); } };
+A['cal-today'] = () => { ui.date = TODAY; ui.calMonth = TODAY.slice(0, 7); renderHealthBody(); };
+
+/* 생리·갱년기 */
+function tabCycle() {
+  const ps = S.periods.slice().sort((a, b) => b.start.localeCompare(a.start)), starts = S.periods.map(p => p.start).sort();
+  const gaps = []; for (let i = 1; i < starts.length; i++) gaps.push(dayDiff(starts[i - 1], starts[i]));
+  const avg = gaps.length ? gaps.reduce((a, b) => a + b, 0) / gaps.length : null;
+  const months = []; { const [y, m] = TODAY.slice(0, 7).split('-').map(Number); for (let i = 5; i >= 0; i--) { const d = new Date(y, m - 1 - i, 1); months.push(d.getFullYear() + '-' + z2(d.getMonth() + 1)); } }
+  const cnt = (sym, ym) => Object.keys(S.days).filter(d => d.startsWith(ym) && (sym === '출혈' ? S.days[d].bleed : (S.days[d].syms || []).includes(sym))).length;
+  const rows = SYMS.concat('출혈').map(sy => { const c = months.map(ym => cnt(sy, ym)), mx = Math.max(1, ...c);
+    return `<div class="crow"><div class="t"><b>${sy === '출혈' ? '출혈 기록' : sy}</b><div class="small muted">월별 기록 일수: ${months.map((ym, i) => (Number(ym.slice(5))) + '월 ' + c[i] + '일').join(' · ')}</div></div><div class="mini" aria-hidden="true">${c.map(v => `<i style="height:${Math.max(2, v / mx * 40)}px"></i>`).join('')}</div></div>`; }).join('');
+  return `<div class="card stack"><h2>생리 기간 기록</h2>
+    <p class="small muted">내가 생리라고 기록한 기간이에요. 앱이 정상 여부를 판단하지는 않아요. 폐경 이후에도 증상 기록을 계속할 수 있어요.</p>
+    <form id="perForm" class="form-grid" novalidate><div class="field"><label for="perS">시작한 날</label><input id="perS" type="date" max="${TODAY}" value="${ui.date}"></div><div class="field"><label for="perE">끝난 날 (진행 중이면 비워 두세요)</label><input id="perE" type="date" max="${TODAY}"></div><div class="field" style="justify-content:flex-end"><button class="btn primary" type="submit">기간 추가</button></div></form>
+    ${ps.length ? ps.map(p => `<div class="crow"><div class="t"><b>${fmtShort(p.start)} ~ ${p.end ? fmtShort(p.end) : '진행 중'}</b><div class="small muted">${p.end ? dayDiff(p.start, p.end) + 1 + '일간' : '끝난 날을 기록하면 기간이 계산돼요'}</div></div><div class="row" style="gap:6px">${p.end ? '' : `<button class="btn sm" data-act="per-close" data-id="${p.id}">오늘 끝남</button>`}<button class="btn sm danger" data-act="per-del" data-id="${p.id}">삭제</button></div></div>`).join('') : '<p class="muted">아직 기록한 기간이 없어요.</p>'}
+    ${gaps.length ? `<div class="kv"><div><b>${nf(avg, 0)}일</b><span>기록 사이 평균 간격(시작일 기준)</span></div><div><b>${gaps.slice(-1)[0]}일</b><span>가장 최근 간격</span></div></div><p class="small muted">기록된 시작일 사이의 간격일 뿐이에요. 갱년기에는 간격이 불규칙해질 수 있어요.</p>` : '<p class="small muted">시작일을 두 번 이상 기록하면 간격이 계산돼요.</p>'}</div>
+  <div class="card stack"><h2>월별 증상 변화 (최근 6달)</h2>${rows}<p class="small muted">증상과 출혈은 달력이나 오늘 기록에서 날마다 체크해요.</p></div>
+  <div class="note info small">증상이 일상에 지장을 주거나 갑자기 심해지면 기록을 가지고 진료를 받으세요. 이 앱은 진단을 하지 않아요.</div>`;
+}
+document.addEventListener('submit', e => {
+  if (e.target.id !== 'perForm') return; e.preventDefault();
+  const s = $('#perS').value, en = $('#perE').value || null;
+  if (!s) return toast('시작한 날을 입력해 주세요'); if (en && en < s) return toast('끝난 날이 시작한 날보다 빠를 수 없어요');
+  if (S.periods.some(p => p.start === s)) return toast('같은 시작일이 이미 있어요');
+  S.periods.push({id: uid(), start: s, end: en}); save(); toast('기간을 추가했어요'); renderHealthBody();
+});
+A['per-close'] = t => { const p = S.periods.find(x => x.id === t.dataset.id); if (p) { p.end = TODAY < p.start ? p.start : TODAY; save(); renderHealthBody(); } };
+A['per-del'] = t => { if (!armed(t, '한 번 더 누르면 삭제돼요')) return; S.periods = S.periods.filter(p => p.id !== t.dataset.id); save(); renderHealthBody(); };
+
+/* 식단 사진 */
+function tabMeals() {
+  const e = ui.mealEdit, nowT = z2(new Date().getHours()) + ':' + z2(new Date().getMinutes());
+  const dates = [...new Set(S.meals.map(m => m.date))].sort().reverse(), shown = dates.slice(0, ui.albumLimit);
+  return `<div class="card stack"><h2>${e ? '식단 수정' : '식단 기록하기'}</h2>
+    <div class="form-grid">
+      <div class="field"><label for="mDate">날짜</label><input id="mDate" type="date" max="${TODAY}" value="${e ? e.date : ui.date}"></div>
+      <div class="field"><label for="mType">식사</label><select id="mType">${MEALS.map(t => `<option ${e && e.type === t ? 'selected' : ''}>${t}</option>`).join('')}</select></div>
+      <div class="field"><label for="mTime">먹은 시간</label><input id="mTime" type="time" value="${e ? e.time : nowT}"></div>
+    </div>
+    <div class="field"><label for="mName">음식 이름</label><input id="mName" type="text" value="${esc(e ? e.name : '')}" placeholder="예: 잡곡밥, 된장국, 나물"></div>
+    <div class="field"><label for="mNote">메모</label><textarea id="mNote" rows="2">${esc(e ? e.note : '')}</textarea></div>
+    <div class="field"><label for="mFoodQ">들어간 식재료 연결 (이름을 입력하고 고르세요)</label><input id="mFoodQ" type="search" autocomplete="off" placeholder="예: 두부">
+      <div id="mSug" class="row" style="gap:6px"></div><div id="mFoods" class="row" style="gap:6px"></div></div>
+    <div><div class="lbl">사진 (여러 장 가능)</div><div class="row"><label class="btn" for="mCam">카메라로 찍기</label><input id="mCam" type="file" accept="image/*" capture="environment" class="sr"><label class="btn" for="mGal">갤러리에서 고르기</label><input id="mGal" type="file" accept="image/*" multiple class="sr"></div><div id="mPrev" class="photos" style="margin-top:8px"></div></div>
+    <div class="row"><button class="btn primary" data-act="meal-save">${e ? '수정 저장' : '식단 저장'}</button>${e ? '<button class="btn" data-act="meal-cancel">수정 취소</button>' : ''}</div>
+    <p class="small muted">사진은 줄여서 이 기기에 저장돼요. 사진만으로 정확한 섭취량이나 혈당 변화를 알 수는 없어요.</p></div>
+  <div class="card stack"><h2>식단 앨범</h2>${shown.length ? shown.map(d => { const r = rec(d), md = r.mood ? moodOf(r.mood) : null;
+      return `<div class="stack" style="gap:10px"><div class="row sp"><h3>${fmtShort(d)}</h3><button class="btn sm" data-act="meal-day" data-date="${d}">이 날 건강 기록</button></div>
+      <div class="small muted">${[r.weight != null ? '몸무게 ' + nf(r.weight) + 'kg' : '', md ? '컨디션 ' + md[1] + ' ' + md[2] : '', r.sleep != null ? '수면 ' + r.sleep + '시간' : ''].filter(Boolean).join(' · ') || '이 날의 건강 기록은 아직 없어요'}</div>
+      ${S.meals.filter(m => m.date === d).sort((a, b) => MEALS.indexOf(a.type) - MEALS.indexOf(b.type) || a.time.localeCompare(b.time)).map(m => `<div class="meal"><div class="row sp"><b>${esc(m.type)} · ${esc(m.time)}</b><span>${esc(m.name || '')}</span></div>${m.note ? `<div class="small">${esc(m.note)}</div>` : ''}${(m.foods || []).length ? `<div class="row" style="gap:6px">${m.foods.map(f => { const it = findItem(f); return `<span class="tag">${esc(f)}${it ? ' ' + BADGE[overall(it)][0] : ''}</span>`; }).join('')}</div>` : ''}${(m.photos || []).length ? `<div class="photos">${m.photos.map((p, i) => `<button data-act="photo-open" data-m="${m.id}" data-i="${i}" aria-label="사진 크게 보기"><img src="${p}" alt="${esc(m.type)} 식단 사진 ${i + 1}"></button>`).join('')}</div>` : ''}
+        <div class="row"><button class="btn sm" data-act="meal-edit" data-id="${m.id}">수정</button><button class="btn sm danger" data-act="meal-del" data-id="${m.id}">삭제</button></div></div>`).join('')}</div>`; }).join('<hr style="border:0;border-top:1px solid var(--line);width:100%">')
+      + (dates.length > shown.length ? '<button class="btn" data-act="album-more">이전 기록 더 보기</button>' : '') : '<p class="muted">아직 기록한 식단이 없어요. 위에서 첫 식단을 남겨 보세요.</p>'}</div>`;
+}
+function wireMeal() {
+  const e = ui.mealEdit; if (e && ui.mealPhotos === null) { ui.mealPhotos = (e.photos || []).slice(); ui.mealFoods = (e.foods || []).slice(); }
+  drawMealPrev(); drawMealFoods();
+  const add = async ev => { const fs = Array.from(ev.target.files || []); for (const f of fs) { try { ui.mealPhotos.push(await fileToDataURL(f, 900, 0.65)); } catch (x) { toast('사진을 읽지 못했어요'); } } ev.target.value = ''; drawMealPrev(); };
+  $('#mCam').addEventListener('change', add); $('#mGal').addEventListener('change', add);
+  $('#mDate').addEventListener('change', ev => { if (ev.target.value && ev.target.value <= TODAY) ui.date = ev.target.value; });
+  const q = $('#mFoodQ');
+  q.addEventListener('input', () => {
+    const v = q.value.trim(); if (!v) { $('#mSug').innerHTML = ''; return; }
+    const m = allItems().map(it => ({it, s: matchScore(it, v)})).filter(x => x.s).sort((a, b) => b.s - a.s).slice(0, 6);
+    $('#mSug').innerHTML = m.map(x => `<button type="button" class="chip" data-act="mf-add" data-n="${esc(x.it.name)}">+ ${esc(x.it.name)}</button>`).join('') + `<button type="button" class="chip" data-act="mf-add" data-n="${esc(v)}">+ "${esc(v)}" 그대로 추가</button>`;
+  });
+  q.addEventListener('keydown', ev => { if (ev.key === 'Enter') { ev.preventDefault(); const v = q.value.trim(); if (v) { const it = findItem(v); addMealFood(it ? it.name : v); } } });
+}
+function drawMealPrev() { const b = $('#mPrev'); if (!b) return; b.innerHTML = ui.mealPhotos.map((p, i) => `<div style="position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden"><img src="${p}" alt="선택한 사진 ${i + 1}" style="width:100%;height:100%;object-fit:cover"><button type="button" class="rm" data-act="mp-del" data-i="${i}" aria-label="사진 ${i + 1} 빼기">✕</button></div>`).join(''); }
+function drawMealFoods() { const b = $('#mFoods'); if (!b) return; b.innerHTML = ui.mealFoods.map((f, i) => { const it = findItem(f); return `<span class="tag" style="font-size:.95rem;padding:4px 6px 4px 12px">${esc(f)}${it ? ' ' + BADGE[overall(it)][0] : ''} <button type="button" class="btn sm" data-act="mf-del" data-i="${i}" style="min-height:32px;padding:0 10px" aria-label="${esc(f)} 빼기">✕</button></span>`; }).join(''); }
+function addMealFood(n) { if (!ui.mealFoods.includes(n)) ui.mealFoods.push(n); $('#mFoodQ').value = ''; $('#mSug').innerHTML = ''; drawMealFoods(); }
+A['mf-add'] = t => addMealFood(t.dataset.n);
+A['mf-del'] = t => { ui.mealFoods.splice(Number(t.dataset.i), 1); drawMealFoods(); };
+A['mp-del'] = t => { ui.mealPhotos.splice(Number(t.dataset.i), 1); drawMealPrev(); };
+A['meal-save'] = () => {
+  const date = $('#mDate').value, name = $('#mName').value.trim();
+  if (!date || date > TODAY) return toast('날짜를 확인해 주세요');
+  if (!name && !ui.mealPhotos.length) return toast('음식 이름을 적거나 사진을 넣어 주세요');
+  const m = {id: ui.mealEdit ? ui.mealEdit.id : uid(), date, type: $('#mType').value, time: $('#mTime').value || '00:00', name, note: $('#mNote').value.trim(), foods: ui.mealFoods.slice(), photos: ui.mealPhotos.slice()};
+  if (ui.mealEdit) S.meals[S.meals.findIndex(x => x.id === m.id)] = m; else S.meals.push(m);
+  ui.date = date; ui.mealEdit = null; ui.mealPhotos = []; ui.mealFoods = []; save(); toast('식단을 저장했어요'); renderHealthBody();
+};
+A['meal-cancel'] = () => { ui.mealEdit = null; ui.mealPhotos = []; ui.mealFoods = []; renderHealthBody(); };
+A['meal-edit'] = t => { ui.mealEdit = S.meals.find(m => m.id === t.dataset.id); ui.mealPhotos = null; renderHealthBody(); window.scrollTo(0, 0); };
+A['meal-del'] = t => { if (!armed(t, '한 번 더 누르면 삭제돼요')) return; S.meals = S.meals.filter(m => m.id !== t.dataset.id); save(); toast('식단을 삭제했어요'); renderHealthBody(); };
+A['meal-day'] = t => { ui.date = t.dataset.date; ui.tab = 'record'; viewHealth(); };
+A['album-more'] = () => { ui.albumLimit += 10; renderHealthBody(); };
+A['photo-open'] = t => { const m = S.meals.find(x => x.id === t.dataset.m); if (!m) return; openModal(`<div class="modal-top"><b>${fmtShort(m.date)} ${esc(m.type)}</b><button class="x" data-act="close" aria-label="닫기">✕</button></div><img src="${m.photos[Number(t.dataset.i)]}" alt="${esc(m.name || m.type)}" style="width:100%;border-radius:20px"><div>${esc(m.name || '')}</div>`); };
+
+/* ===== 홈 ===== */
+function viewHome() {
+  const r = rec(TODAY), h = S.profile.height, b = bmiOf(r.weight, h), md = r.mood ? moodOf(r.mood) : null, meals = S.meals.filter(m => m.date === TODAY);
+  const goTab = (tab) => `data-act="home-health" data-tab="${tab}"`;
+  const c1 = counts('food'), c2 = counts('spice');
+  main().innerHTML = `
+  <section aria-label="오늘 요약" class="stack"><h1>오늘의 건강</h1>
+    <div class="cards">
+      <button class="sum" ${goTab('record')}><span class="k">오늘의 체중</span><span class="v">${r.weight != null ? nf(r.weight) + '<small> kg</small>' : '<small>기록 없음</small>'}</span><span class="small">${b ? 'BMI ' + nf(b) + ' · ' + bmiLabel(b) : h ? '눌러서 기록하기' : '키를 입력하면 BMI가 나와요'}</span></button>
+      <button class="sum" ${goTab('record')}><span class="k">컨디션</span><span class="e" aria-hidden="true">${md ? md[1] : '—'}</span><span class="small">${md ? md[0] + '점 · ' + md[2] : '눌러서 기록하기'}</span></button>
+      <button class="sum" ${goTab('record')}><span class="k">수면 시간</span><span class="v">${r.sleep != null ? r.sleep + '<small> 시간</small>' : '<small>기록 없음</small>'}</span><span class="small">${r.sleep != null ? esc(sleepMsg(r.sleep)) : '눌러서 기록하기'}</span></button>
+      <button class="sum" ${goTab('meals')}><span class="k">식단 기록</span><span class="v">${meals.length ? meals.length + '<small> 건</small>' : '<small>아직 없어요</small>'}</span><span class="small">${meals.length ? [...new Set(meals.map(m => m.type))].join(' · ') : '눌러서 식단 사진 남기기'}</span></button>
+    </div></section>
+  <section aria-label="메뉴" class="cards">
+    <a class="cat c1" href="#food">${ICON.food}<h2>식재료</h2><span class="small">${c1.total}개 등록 · 초록·노랑·빨강으로 한눈에</span></a>
+    <a class="cat c2" href="#spice">${ICON.spice}<h2>조미료</h2><span class="small">${c2.total}개 등록 · 장류, 양념, 기름, 소스</span></a>
+    <a class="cat c3" href="#recipe">${ICON.recipe}<h2>레시피</h2><span class="small">${S.recipes.length}개 · 인분 자동 계산, 장보기 목록</span></a>
+    <a class="cat c4" href="#health">${ICON.health}<h2>건강 상태</h2><span class="small">${Object.keys(S.days).length}일 기록 · 몸무게, 컨디션, 달력, 식단 사진</span></a>
+  </section>
+  ${S.profile.setupDone ? `<div class="card soft row sp"><span class="small">관리 중: ${activeConds().map(k => COND.find(c => c.k === k).n).join(', ') || '입력 없음'}</span><button class="btn sm" data-act="prof-edit-home">내 기본 정보 수정</button></div>` : `<div class="note info row sp"><span>키와 관리하는 건강 상태를 입력하면 BMI와 식재료 적합도가 내게 맞춰져요.</span><button class="btn sm" data-act="home-health" data-tab="record">입력하러 가기</button></div>`}
+  <details class="card" id="dataPanel"><summary>데이터 백업과 관리</summary>
+    <div class="stack" style="margin-top:12px">
+      <p class="small">${syncNote()} 만약을 위해 가끔 백업 파일도 만들어 두세요.</p>
+      <div class="kv"><div><b>${Object.keys(S.days).length}</b><span>건강 기록 일수</span></div><div><b>${S.meals.length}</b><span>식단 기록</span></div><div><b>${S.meals.reduce((a, m) => a + (m.photos || []).length, 0)}</b><span>식단 사진</span></div><div><b>${S.recipes.length}</b><span>레시피</span></div></div>
+      <div class="row"><button class="btn primary" data-act="bk-json">전체 백업 파일 만들기</button><button class="btn" data-act="bk-csv">건강 기록 표(CSV) 내보내기</button></div>
+      <div class="field"><label for="impFile">백업 파일에서 복원하기 (지금 기록을 덮어써요)</label><input id="impFile" type="file" accept=".json,application/json"></div>
+      <div id="impBox"></div>
+      <div><button class="btn danger" data-act="reset-all">모든 기록 지우고 처음부터</button></div>
+    </div></details>`;
+  const imp = $('#impFile'); if (imp) imp.addEventListener('change', async ev => {
+    const f = ev.target.files[0]; if (!f) return;
+    try { const j = JSON.parse(await f.text()); if (!j || typeof j !== 'object' || !j.days || !j.profile) throw 0; window._imp = j; $('#impBox').innerHTML = `<div class="note">백업 파일을 읽었어요 (건강 기록 ${Object.keys(j.days).length}일, 식단 ${(j.meals || []).length}건, 레시피 ${(j.recipes || []).length}개). 복원하면 지금 기록이 이 내용으로 바뀌어요.</div><button class="btn danger" data-act="imp-go" style="margin-top:8px">복원하기</button>`; }
+    catch (x) { $('#impBox').innerHTML = '<div class="note bad">이 파일은 백업 파일이 아니에요. 이 앱에서 만든 .json 파일을 골라 주세요.</div>'; }
+  });
+}
+A['home-health'] = t => { ui.tab = t.dataset.tab; ui.date = TODAY; go('health'); };
+A['prof-edit-home'] = () => A['prof-edit']();
+A['bk-json'] = () => saveFile('mom-health-backup-' + TODAY + '.json', JSON.stringify(S), 'application/json');
+A['bk-csv'] = () => {
+  const q = v => '"' + String(v ?? '').replace(/"/g, '""') + '"', h = S.profile.height;
+  const rows = [['날짜', '몸무게kg', 'BMI', '컨디션(1-5)', '피로도(1-5)', '수면시간', '출혈', '출혈양', '증상', '메모']];
+  Object.keys(S.days).sort().forEach(d => { const r = S.days[d]; rows.push([d, r.weight, r.weight && h ? nf(bmiOf(r.weight, h)) : '', r.mood, r.fat, r.sleep, r.bleed ? '예' : '', r.flow, (r.syms || []).join(' / '), r.note]); });
+  saveFile('mom-health-records-' + TODAY + '.csv', '﻿' + rows.map(r => r.map(q).join(',')).join('\r\n'), 'text/csv');
+};
+A['imp-go'] = () => { if (!window._imp) return; S = mergeState(window._imp); window._imp = null; save(); toast('복원했어요'); viewHome(); };
+A['reset-all'] = t => { if (!armed(t, '정말 모두 지울까요? 같은 사이트를 보는 모든 기기에서 지워져요. 한 번 더 누르세요')) return; S = defaultState(); ui.recipeServ = {}; save(); toast('처음 상태로 되돌렸어요'); viewHome(); };
+
+/* ===== 시작 ===== */
+(async function boot() {
+  buildHeader();
+  main().innerHTML = '<div class="card">불러오는 중이에요…</div>';
+  let loaded = null; try { loaded = await store.load(); } catch (e) {}
+  S = mergeState(loaded);
+  try { await sync.init(!!loaded); } catch (e) {}
+  window.addEventListener('hashchange', route);
+  route();
+  store.save(S).then(ok => setFoot(ok));
+})();
+
+</script>
+
+</body></html>
