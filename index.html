@@ -1728,5 +1728,58 @@ A['reset-all'] = t => { if (!armed(t, '정말 모두 지울까요? 같은 사이
   });
 })();
 </script>
+<script>
+(async function () {
+  const endpoint =
+    "https://health-ai-helper.moncawhat00.workers.dev/?foods=1";
 
+  try {
+    const response = await fetch(endpoint);
+    if (!response.ok) throw new Error("식재료를 불러오지 못했어요.");
+
+    const data = await response.json();
+    const foods = data.foods || [];
+
+    if (!foods.length) return;
+
+    // 식재료 영역에서 표시할 위치 찾기
+    const headings = [...document.querySelectorAll("h1,h2,h3,h4")]
+      .filter(el => el.textContent.includes("식재료"));
+
+    if (!headings.length) {
+      console.log("식재료 제목을 찾지 못했어요.", foods);
+      return;
+    }
+
+    const section = headings[0].closest("section, article, .card") ||
+                    headings[0].parentElement;
+
+    const list = document.createElement("div");
+    list.style.cssText =
+      "display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0;";
+
+    foods.forEach(food => {
+      const card = document.createElement("div");
+      card.style.cssText =
+        "padding:16px;border:1px solid #d9e8d5;border-radius:16px;background:#f7fbf5;color:#304b35;";
+
+      const name = document.createElement("h3");
+      name.textContent = food.name || food.ingredient || "식재료";
+      name.style.marginTop = "0";
+
+      const detail = document.createElement("p");
+      detail.textContent =
+        food.summary || food.reason || food.description ||
+        food.answer || "저장된 식재료 정보";
+
+      card.append(name, detail);
+      list.appendChild(card);
+    });
+
+    section.appendChild(list);
+  } catch (error) {
+    console.error("식재료 표시 오류:", error);
+  }
+})();
+</script>
 </body></html>
